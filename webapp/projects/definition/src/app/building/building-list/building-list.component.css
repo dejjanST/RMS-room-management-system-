@@ -1,0 +1,52 @@
+.mat-row {
+    cursor: pointer;
+}
+
+@media(max-width: 767px) {
+    /* Zebra striping */
+    tr:nth-of-type(odd) {
+        background: whitesmoke;
+    }
+    tr:nth-of-type(even) {
+        background: lightgray;
+    }
+    td {
+        padding: 0 !important;
+        min-height: 24px;
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+    }
+    td>* {
+        width: 125px;
+    }
+    td>span {
+        height: auto;
+    }
+    td.actions {
+        text-align: left;
+    }
+    td.mat-cell:last-of-type {
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    td.mat-cell:last-of-type>* {
+        margin-bottom: 5px;
+    }
+    tr.mat-row {
+        height: auto;
+    }
+
+    .mat-header-row {
+        display: none;
+    }
+    .mat-row {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 24px;
+    }
+    mat-progress-bar {
+        width: 50%;
+    }
+}

@@ -1,0 +1,27 @@
+<mat-card class="login-card">
+  <mat-toolbar color="primary">
+      <mat-card-title i18n vedTitle>You are logged in</mat-card-title>
+  
+      <ul>
+          <li>
+            <button mat-button [matMenuTriggerFor]="menuProfile" type="button"><mat-icon title="Profile settings" i18n-title>person</mat-icon></button>
+            <mat-menu #menuProfile="matMenu">
+                <a routerLink="../profile" mat-menu-item i18n>My Profile</a>
+                <button mat-menu-item (click)="loggout()" i18n>Logout</button>
+            </mat-menu>
+          </li>
+
+          <li>
+            <languages></languages>
+          </li>
+      </ul>
+  </mat-toolbar>
+  
+
+  <mat-card-actions align="end">
+    <form novalidate (ngSubmit)="loggout()" id="logoutForm">
+        <button type="submit" class='submitButton' mat-raised-button color="primary" i18n>LOGOUT</button>
+    </form>
+  </mat-card-actions>
+
+</mat-card>

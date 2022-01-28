@@ -1,0 +1,11 @@
+<button mat-button [matMenuTriggerFor]="menu" type="button"><mat-icon>language</mat-icon></button>
+<mat-menu #menu="matMenu">
+    <a href="{{ setLanguage('en') }}" mat-menu-item>
+        <mat-icon *ngIf="currentLanguage=='en'">done</mat-icon>
+        English
+    </a>
+    <a href="{{ setLanguage('mk') }}" mat-menu-item>
+        <mat-icon *ngIf="currentLanguage=='mk'">done</mat-icon>
+        Македонски
+    </a>
+</mat-menu>

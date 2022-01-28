@@ -1,0 +1,13 @@
+.editProfile-card {
+  max-width: 500px;
+  margin: 50px auto !important;
+}
+
+.newPassword{
+  margin-top: 22px;
+}
+
+.mat-divider {
+  margin-top: 12px;
+}
+

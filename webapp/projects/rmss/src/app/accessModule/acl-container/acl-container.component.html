@@ -1,0 +1,25 @@
+<form class="flex" (submit)="assignPermissions()">
+    <mat-card class="flex ved">
+        <mat-card-header>
+            <mat-toolbar color="primary">
+                <mat-card-title i18n class="containerACL">
+                    Access Card
+                </mat-card-title>
+            </mat-toolbar>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="flex vertical">
+                <app-key [keyId]="keyId"></app-key>
+                <app-access-group-list></app-access-group-list>
+            </div>
+            <app-acl-manager></app-acl-manager>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-raised-button back i18n>Back</a>
+
+            <button mat-raised-button color="primary" id="assignBtn" type="submit" i18n>Assign Access</button>
+
+        </mat-card-actions>
+    </mat-card>
+</form>

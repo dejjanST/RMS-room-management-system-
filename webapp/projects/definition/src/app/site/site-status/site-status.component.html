@@ -1,0 +1,15 @@
+<div id="container">
+    <div id="status" [title]="siteDetails.status == 1 ? 'Online': 'Offline'" [ngClass]="siteDetails.status == 1 ? 'online' : 'offline'">
+        <span *ngIf="siteDetails.mode == 1" i18n>Definition</span>
+        <span *ngIf="siteDetails.mode == 2" i18n>Commissioning</span>
+        <span *ngIf="siteDetails.mode == 3" i18n>Operational</span>
+    </div>
+
+    <button i18n-title
+        title="Last Push: {{siteDetails.lastPush*1000 | date: 'dd.MM.yyyy HH:mm'}}" 
+        mat-mini-fab type="button" 
+        [disabled]="siteDetails.status==0 || loading" (click)="pushConfiguration()" stopPropagation>
+    <mat-icon>input</mat-icon>
+  </button>
+
+</div>

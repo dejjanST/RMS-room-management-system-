@@ -1,0 +1,117 @@
+<mat-card class="ved flex">
+    <mat-toolbar color="primary">
+        <mat-card-title vedTitle i18n>
+            Verification Report
+        </mat-card-title>
+    </mat-toolbar>
+
+    <mat-card-content>
+
+        <header>
+            <h1>
+                <span i18n>Site Name</span>: <strong>{{ (globalService.site.data$ | async).name }}</strong> </h1>
+            <h1><span i18n>Report Generated</span>: <strong>{{ timestamp | date:'dd MMM y' }}</strong> </h1>
+        </header>
+
+        <br>
+
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title i18n>
+                        Filters
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <form [formGroup]="formGroup">
+                    <div class="filters">
+
+                        <mat-form-field>
+                            <mat-label i18n>Filter by Floor Number</mat-label>
+                            <input matInput type="number" formControlName="floor_number" id="floorNumber">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label i18n>Filter by Unit Name</mat-label>
+                            <input matInput type="text" formControlName="unit_name" id="unitName">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label i18n>Filter by Equipment</mat-label>
+                            <input matInput type="text" formControlName="equipment" id="equipment">
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label i18n>Filter by Status</mat-label>
+                            <mat-select formControlName="status" id="status">
+                                <mat-option value="" i18n>All</mat-option>
+                                <mat-option [value]="2" i18n>Working</mat-option>
+                                <mat-option [value]="3" i18n>Wiring</mat-option>
+                                <mat-option [value]="4" i18n>Equipment</mat-option>
+                                <mat-option [value]="5" i18n>Controller</mat-option>
+                                <mat-option [value]="6" i18n>Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                    </div>
+                </form>
+
+
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <br>
+
+        <table id="verificationTable" mat-table [dataSource]="verificationReport.data" #myTable class="my-table" *ngIf="verificationReport.data.length>0">
+
+            <ng-container matColumnDef="floor">
+                <th mat-header-cell *matHeaderCellDef i18n>Floor</th>
+                <td mat-cell *matCellDef="let element" id="{{ 'floor-' + element.id }}">
+                    <span class="mobile-label" i18n>Floor:</span> {{element.floor}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="unitName">
+                <th mat-header-cell *matHeaderCellDef i18n>Unit Name</th>
+                <td mat-cell *matCellDef="let element" id="{{ 'name-' + element.id }}">
+                    <span class="mobile-label" i18n>Unit Name:</span> {{element.unit_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="equipment">
+                <th mat-header-cell *matHeaderCellDef i18n>Equipment</th>
+                <td mat-cell *matCellDef="let element" id="{{ 'equipment-' + element.id }}">
+                    <span class="mobile-label" i18n>Equipment:</span> {{element.equipment}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef i18n>Status</th>
+                <td mat-cell *matCellDef="let element" id="{{ 'status-' + element.id }}">
+                    <span class="mobile-label" i18n>Status:</span>
+                    <span *ngIf="element.status === 2" i18n>Working</span>
+                    <span *ngIf="element.status === 3" i18n>Wiring</span>
+                    <span *ngIf="element.status === 4" i18n>Equipment</span>
+                    <span *ngIf="element.status === 5" i18n>Controller</span>
+                    <span *ngIf="element.status === 6" i18n>Other</span>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="note">
+                <th mat-header-cell *matHeaderCellDef i18n>Note:</th>
+                <td mat-cell *matCellDef="let element" id="{{ 'note-' + element.id }}">
+                    <span class="mobile-label" i18n>Note:</span> {{element.note}} </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="['floor', 'unitName', 'equipment', 'status', 'note']"></tr>
+            <tr mat-row *matRowDef="let client; columns: ['floor', 'unitName', 'equipment', 'status', 'note'];"></tr>
+        </table>
+
+
+        <p *ngIf="verificationReport.data.length==0" i18n>No Reports found</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-raised-button id="printReport" (click)="print()" i18n>Print or Save REPORT</button>
+    </mat-card-actions>
+
+
+</mat-card>

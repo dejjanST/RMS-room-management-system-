@@ -1,0 +1,37 @@
+:host {
+    display: block;
+}
+
+mat-card {
+    padding: 0px;
+    max-width: 600px;
+}
+
+.datePicker {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-card-content {
+    margin-bottom: 0px;
+}
+
+.editKey {
+  vertical-align: middle !important;
+  float: right;
+}
+
+.validTo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.validTo mat-form-field {
+  width: 80%;
+}

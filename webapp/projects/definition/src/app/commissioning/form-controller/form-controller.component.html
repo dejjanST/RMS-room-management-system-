@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="fex">
+    <mat-form-field class="masterID">
+        <input matInput placeholder="Enter Master Controller serial number" formControlName="masterID">
+    </mat-form-field>
+    <p>or</p>
+
+    <zxing-scanner *ngIf="scannerEnabled" [(device)]="currentDevice" (scanSuccess)="onCodeResult($event)" (permissionResponse)="onHasPermission($event)" (camerasFound)="onCamerasFound($event)"></zxing-scanner>
+
+
+    <button type="button" (click)="enableScanner()" mat-raised-button id="QRcode" i18n>Scan QR code <span
+            class="material-icons">qr_code_scanner</span></button>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid" i18n>Set Controller</button>
+</form>

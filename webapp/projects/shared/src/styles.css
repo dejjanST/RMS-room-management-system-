@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+.login-card {
+    max-width: 500px;
+    margin: 50px auto !important;
+}
+
+.mat-card-header-text,
+.mat-card,
+.mat-card-header .mat-card-title,
+.mat-card-actions {
+    margin: 0;
+    padding: 0;
+}
+
+.mat-card mat-toolbar {
+    position: relative;
+}
+
+mat-sidenav-content {
+    left: 200px;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    width: auto;
+    bottom: 0;
+    padding: 0;
+    right: 0;
+}
+
+mat-card-content {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+mat-sidenav-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}

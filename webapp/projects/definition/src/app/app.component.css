@@ -1,0 +1,17 @@
+#menuToggle {
+    position: absolute;
+    z-index: 1;
+}
+
+#sideBarInner {
+    margin-top: 45px;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+a>mat-icon {
+    color: rgba(0, 0, 0, .87);
+}

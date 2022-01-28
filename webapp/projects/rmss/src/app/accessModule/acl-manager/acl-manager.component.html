@@ -1,0 +1,97 @@
+<mat-card class="ved flex">
+    <mat-toolbar>
+        <mat-card-title i18n>
+            Access List
+        </mat-card-title>
+    </mat-toolbar>
+
+    <mat-card-content>
+
+        <div id="actionContainer">
+            <mat-form-field appearance="fill">
+                <mat-label i18n>Buildings</mat-label>
+                <mat-select id="buildingSelect" [(value)]="selected.building" (selectionChange)="onSelect($event,'building')">
+                    <mat-option *ngFor="let item of buildings" id="optionB{{item.id}}" [value]="item">{{item.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label i18n>Floors</mat-label>
+                <mat-select id="floorSelect" [(value)]="selected.floor" (selectionChange)="onSelect($event,'floor')">
+                    <mat-option *ngFor="let item of floors" id="optionF{{item.id}}" [value]="item">{{item.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label i18n>Units</mat-label>
+                <mat-select id="unitSelect" [(value)]="selected.unit" (selectionChange)="onSelect($event,'unit')">
+                    <mat-option *ngFor="let item of units" id="optionU{{item.id}}" [value]="item">{{item.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button class="grantBtn" id="includeRule" title="include" mat-mini-fab type="button" (click)="include()" [disabled]="selectAllBuidlings">
+                <mat-icon>add</mat-icon>
+            </button>
+
+            <button class="denyBtn" id="excludeRule" title="exclude" mat-mini-fab type="button" (click)="exclude()" [disabled]="selectAllBuidlings">
+                <mat-icon>remove</mat-icon>
+            </button>
+        </div>
+
+
+        <table #aclTable mat-table [dataSource]="aclList" class="aclList">
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Building Column -->
+            <ng-container matColumnDef="building">
+                <th mat-header-cell *matHeaderCellDef i18n>Building </th>
+                <td mat-cell *matCellDef="let element"> {{element.building.name}} </td>
+            </ng-container>
+
+            <!-- Floor Column -->
+            <ng-container matColumnDef="floor">
+                <th mat-header-cell *matHeaderCellDef i18n>Floor </th>
+                <td mat-cell *matCellDef="let element"> {{element.floor.name}} </td>
+            </ng-container>
+
+            <!-- Unit Column -->
+            <ng-container matColumnDef="unit">
+                <th mat-header-cell *matHeaderCellDef i18n>Unit </th>
+                <td mat-cell *matCellDef="let element"> {{element.unit.name}} </td>
+            </ng-container>
+
+
+            <!-- Groups Column -->
+            <ng-container matColumnDef="groups">
+                <th mat-header-cell *matHeaderCellDef i18n>Groups </th>
+                <td mat-cell *matCellDef="let element">
+
+                    <ul class="flex">
+                        <li *ngFor="let group of element.groups" [title]="group.name" [style.background-color]="group.color" class="circle">
+                        </li>
+                    </ul>
+                </td>
+            </ng-container>
+
+            <!-- Actions Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element; let i = index">
+                    <button type="button" [disabled]="!element.manual" id="deleteACL{{i}}" mat-mini-fab color="warn" (click)="removeItem(element)" class="delete-{{element.unit.id}}">
+                        <mat-icon>delete</mat-icon>
+                    </button> </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr [ngClass]="{ grant: !row.exclude, deny: row.exclude}" mat-row *matRowDef="let row; columns: displayedColumns;">
+            </tr>
+        </table>
+
+        <!-- <p *ngIf="accessList" i18n>No Access Assigned</p> -->
+    </mat-card-content>
+
+
+</mat-card>

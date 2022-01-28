@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1fef7dfc57081b8ce4051d307b59e054e1b4821d" datatype="html">
+        <source>Email Address is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3735d1fdb63c3e03d39fabcb3aceaa441d9597b8" datatype="html">
+        <source>Enter Proper Email Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1e20f8b8a4706526c9024cc2f39d568345d100dc" datatype="html">
+        <source>Password is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="02a700b0e242caa58970434210627b94b874f171" datatype="html">
+        <source>Password must be at least 4 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3d8e0fbe610aef91e1063fd213e35c402383a341" datatype="html">
+        <source>captcha</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="446c255a728478d1c266d69173625660e1108958" datatype="html">
+        <source>Captcha is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="88464d9130af1505175b4e05578043a4546570ee" datatype="html">
+        <source>Enter at least 4 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3a8e04b34236be1cb450987973bcb7b33d483e35" datatype="html">
+        <source>Forgot password?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9e58dfa6c0a452d8333674cd6aa497d392b1c633" datatype="html">
+        <source>LOGIN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="941c8ec222abbdce9b6245020f62b3e0a495a3f7" datatype="html">
+        <source>Password Reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c1b7e6d75ff4285c7636c67e5ef259629b81725b" datatype="html">
+        <source>Confirm Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fa20a22dc6023305135050aaee763ed72189b5c5" datatype="html">
+        <source>Password don&apos;t match</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9134801552b7509c4816e75d9fa002898b7b63c3" datatype="html">
+        <source>RESET</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d595ba663a99fb517994fa8ce3d8acad40143204" datatype="html">
+        <source>Your password has been reset successfully!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4ccf49c47f705e24f62001adb557beb68242e1d1" datatype="html">
+        <source>Back to login form</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/password-reset/password-reset.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d536b54b8ed99152d94d2b430d7f88abea5eddbb" datatype="html">
+        <source>Reset Password Request</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="79ca791f967bf517595fff63d43cd9f217c29476" datatype="html">
+        <source>Send instructions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ee08151822c72abefbf3e3b53c0335695a1d026a" datatype="html">
+        <source>Send Password reset link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="30cb5bd98b71947e90d6fe97f83ec3631f0c3a91" datatype="html">
+        <source>Please check your email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca6c5c1aaadbd1f952d9628018f8e5d792fe687c" datatype="html">
+        <source>You are logged in</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/logout/logout.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="015e45e21b86e81108cda9cd0e74a9a0cdd986f0" datatype="html">
+        <source>Profile settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/logout/logout.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="450e28e57284212c18cd3beb79b91cfea5a0d122" datatype="html">
+        <source>My Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/logout/logout.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+        <source>Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/logout/logout.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="afd707a7a917a96605804e92e66cb17e2bf5c7e2" datatype="html">
+        <source>LOGOUT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/logout/logout.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d3781ad331fdd0bc9055c45a41664ac467de63af" datatype="html">
+        <source>Edit Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c83b838d845690bcb897f775f53b5316535306dc" datatype="html">
+        <source>First Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="198754934a0d0fe6b4b259910dddd0d78537e023" datatype="html">
+        <source>First name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e72bf93999912f9d0fa3bfbdf1fb8c17cfde6fdc" datatype="html">
+        <source>First name must be at least 2 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="166b2cc65003221ff5f3ec05d5baca41e6821396" datatype="html">
+        <source>Last Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b061a80a31110c0c4b925b68eb8b9d371e818b0f" datatype="html">
+        <source>Last name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="72178a3999c4224608682a5496f1930ab2e76c4f" datatype="html">
+        <source>Last name must be at least 2 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c7014c6360e94b236286b869c3fe0ea9911c0387" datatype="html">
+        <source>New Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7f41ea996cd96f8096dda098d181970fb60b7c4b" datatype="html">
+        <source>Retype New Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1ae3dcf96b494406b6fd6fbd2f15f7259553bf4d" datatype="html">
+        <source>Current Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8b8132ad5bfe0707cc9ae947c2a2d6cb6fcdf588" datatype="html">
+        <source>Current Password is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf272d006ff8c0b60e61b14e17fa6a39b30d614a" datatype="html">
+        <source>SAVE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/Profile/components/edit-profile/edit-profile.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

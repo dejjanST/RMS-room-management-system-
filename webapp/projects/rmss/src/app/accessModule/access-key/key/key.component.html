@@ -1,0 +1,79 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="keyPage ved">
+    <mat-card>
+        <mat-toolbar>
+            <mat-card-title>
+                <span i18n *ngIf="!keyId">Create Key </span>
+                <span i18n *ngIf="editMode">Edit </span>
+                <span i18n *ngIf="keyId">Key </span>
+            </mat-card-title>
+        </mat-toolbar>
+
+
+        <mat-card-content>
+
+            <div class="inputs">
+                <mat-form-field class="full-width">
+                    <mat-label i18n>Key Number</mat-label>
+                    <input matInput formControlName="key_no" name="key_no" class="key_no">
+                    <mat-error *ngIf="f.key_no.invalid && (f.key_no.dirty || f.key_no.touched)" class="alert" align="end" id="error-key_no">
+                        <mat-error *ngIf="f.key_no.errors.required" id="key_noNumRequired" i18n>Key Number is required
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label i18n>Description</mat-label>
+                    <input matInput formControlName="desc" name="desc" class="key_desc">
+                    <mat-error *ngIf="f.desc.invalid && (f.desc.dirty || f.desc.touched)" class="alert" align="end" id="error-desc">
+                        <mat-error *ngIf="f.desc.errors.required" id="key_descNameRequired" i18n>Key Description is required
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Valid From</mat-label>
+                    <input matInput id="validFrom" [matDatepicker]="validFrom" placeholder="Choose a date" formControlName="valid_from" class="validFrom">
+                    <mat-datepicker-toggle matSuffix [for]="validFrom"></mat-datepicker-toggle>
+                    <mat-datepicker #validFrom></mat-datepicker>
+                    <mat-error *ngIf="f.valid_from.hasError('required')" id="key_validFrom">This field is required
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="validTo">
+                  <mat-form-field >
+                    <mat-label>Valid To</mat-label>
+                    <input matInput id="validTo" [matDatepicker]="validTo" placeholder="Choose a date" formControlName="valid_to" class="validTo">
+                    <mat-datepicker-toggle matSuffix [for]="validTo"></mat-datepicker-toggle>
+                    <mat-datepicker #validTo></mat-datepicker>
+                    <mat-error *ngIf="form.get('valid_to').errors?.dateLessThan" id="key_validTo">Should be bigger date.
+                    </mat-error>
+                </mat-form-field>
+                <mat-checkbox [disabled]="checkBoxDisabled" [checked]="true" (change)="setAll($event.checked)">Infinite</mat-checkbox>
+                </div>
+
+                <mat-form-field class="example-full-width">
+                    <mat-label i18n>Choose a Key Type</mat-label>
+                    <mat-select class="keyType" formControlName="key_type" name="key_type">
+                        <mat-option *ngFor="let type of types.data" [value]="type.id" id="{{ 'keyType-' + type.id }}">
+                            {{ type.type }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="f.key_type.invalid && (f.key_type.dirty || f.key_type.touched)" class="alert" align="end" id="error-key_type">
+                        <mat-error *ngIf="f.key_type.errors.required" id="validateKeyRequired" i18n>Key Type is required
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <a color="primary" mat-mini-fab class="editKey" i18n-title title="edit" *ngIf="keyId && !editMode" (click)="openEditKeyDialog()" i18n>
+                <mat-icon> edit </mat-icon>
+            </a>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid" i18n *ngIf="!keyId" class="createKey">Save</button>
+            <button type="button" mat-button mat-dialog-close i18n *ngIf="editMode">Cancel</button>
+            <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid" i18n *ngIf="editMode" class="updateKey">Update</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

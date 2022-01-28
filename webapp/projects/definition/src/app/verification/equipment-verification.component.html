@@ -1,0 +1,23 @@
+<mat-card class="ved flex">
+    <mat-toolbar color="primary">
+        <mat-card-title>
+            <span i18n vedTitle> Verification</span>
+            <span i18n> for Unit: </span>
+            <span>{{unitDetails.name}}</span>
+        </mat-card-title>
+    </mat-toolbar>
+
+    <mat-card-content>
+
+
+        <mat-accordion *ngIf="equipmentList.length > 0" class="example-headers-align">
+            <app-equipment-item *ngFor="let item of equipmentList" [siteId]="siteId" [unitId]="unitId" [equipment]="item">
+            </app-equipment-item>
+        </mat-accordion>
+
+        <p *ngIf="equipmentList.length == 0" i18n>No Equipment assigned</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-raised-button back i18n>Back</a>
+    </mat-card-actions>
+</mat-card>

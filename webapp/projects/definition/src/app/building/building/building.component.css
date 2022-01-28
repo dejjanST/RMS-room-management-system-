@@ -1,0 +1,44 @@
+
+.dropzone {
+  padding: 10px;
+  height: 200px;
+  text-align: center;
+  border: dashed 1px #979797;
+  position: relative;
+  margin: 0 auto;
+}
+
+.dropzone input {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.dropzone label {
+  color: white;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 21.5px;
+  background-color: #db202f;
+  padding: 8px 16px;
+}
+
+.dropzone p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #38424c;
+}
+
+#building mat-card-content {
+  display: flex;
+}
+
+#buildingImage {
+  margin-left: 40px;
+  width: auto;
+  height: 400px;
+}

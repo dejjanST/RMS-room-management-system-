@@ -1,0 +1,54 @@
+.master {
+    width: 425px;
+}
+
+#setMaster {
+    width: 200px;
+    height: 40px;
+    color: white;
+    margin: 0 auto;
+}
+
+#panelBody {
+    display: flex;
+    flex-direction: column;
+}
+
+#QRcode {
+    width: 10px;
+    margin-left: 10px;
+    background-color: white;
+}
+
+#firstRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-panel-title {
+    display: flex;
+    align-items: center;
+}
+
+mat-panel-title mat-icon {
+    margin-right: 10px;
+}
+
+.associated {
+    color: #28a745 !important;
+}
+
+.notAssociated {
+    color: darkgray;
+}
+
+.mat-expansion-panel-content .mat-expansion-panel-body {
+    padding: 0 16px !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .master {
+        width: 100%;
+        max-width: 425px;
+    }
+}

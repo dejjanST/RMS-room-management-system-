@@ -1,0 +1,220 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-card class="ved">
+
+        <mat-toolbar color="primary">
+            <mat-card-title>
+                <h1>
+                    <span *ngIf="!editId" i18n vedTitle>Create Unit Type</span>
+                    <span *ngIf="editId" i18n vedTitle>Edit Unit Type</span>
+                    <span>: {{ form.get('name').value }}</span>
+                </h1>
+            </mat-card-title>
+
+            <div id="reminingTerminals">
+                <p i18n>Remaining IO terminals</p>
+                <mat-chip-list aria-label="Fish selection">
+                    <mat-chip color="accent" selected title="High Voltage">
+                        HV: <span id="remainingHV">{{ (equipments | async) | byKeyValue:'selected':true | sumByKey:'hv' }}</span>
+                    </mat-chip>
+                    <mat-chip color="accent" selected title="Low Voltage">
+                        LV: <span id="remainingLV">{{ (equipments | async) | byKeyValue:'selected':true | sumByKey:'lv' }}</span>
+                    </mat-chip>
+                    <mat-chip color="accent" selected title="Analog Voltage">
+                        AV: <span id="remainingAV">{{ (equipments | async) | byKeyValue:'selected':true | sumByKey:'av' }}</span>
+                    </mat-chip>
+                    <mat-chip color="accent" selected title="Relay Output">
+                        RO: <span id="remainingRO">{{ (equipments | async) | byKeyValue:'selected':true | sumByKey:'ro' }}</span>
+                    </mat-chip>
+                    <mat-chip color="accent" selected title="Thermistor and Digital Input">
+                        TI+DI: <span id="remainingTIDI">{{ (equipments | async) | byKeyValue:'selected':true | sumByKey:'tidi' }}</span>
+                    </mat-chip>
+                </mat-chip-list>
+            </div>
+
+            <mat-chip-list class="status">
+                <mat-chip color="accent" selected *ngIf="locked" i18n>This Unit Type is locked.</mat-chip>
+                <mat-chip color="accepted" selected *ngIf="!locked" i18n>This Unit Type is unlocked.</mat-chip>
+            </mat-chip-list>
+
+
+        </mat-toolbar>
+
+        <mat-card-content>
+
+            <mat-drawer-container class="sideNavContainer">
+                <mat-drawer class="sideNav" mode="side" opened>
+                    <ul id="equipmentType">
+                        <li *ngFor="let type of ((equipments | async)| distinct:'category':'MC')">
+                            <button *ngIf="type" type="button" mat-button id="type{{type | trim}}" [ngClass]="{'mat-primary mat-raised-button': type==selectedType}" (click)="setType(type)">
+                                <span>
+                                    {{type}}
+                                </span>
+                                <span class="selectedByType" *ngIf="selectedModel[type]">
+                                    {{ selectedModel[type].model }}
+                                    /
+                                    {{ selectedModel[type].quantity }}
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </mat-drawer>
+
+                <mat-drawer-content class="sideNavContent">
+                    <mat-accordion class="generalData">
+                        <mat-expansion-panel>
+
+                            <mat-expansion-panel-header>
+                                <mat-panel-title i18n>
+                                    General data
+                                </mat-panel-title>
+
+                            </mat-expansion-panel-header>
+                            <ul id="definition">
+
+                                <li class="name">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label i18n>Enter name</mat-label>
+                                        <input formControlName="name" name="name" id="utName" matInput placeholder="Unit type name">
+                                        <mat-error *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert" align="end" id="error-name">
+                                            <mat-error *ngIf="f.name.errors.required" id="nameIdRequired"> <span i18n>Please enter</span> <strong i18n>Name</strong></mat-error>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </li>
+
+                                <li class="controller">
+                                    <mat-form-field>
+                                        <mat-label i18n>Select a Master Controller</mat-label>
+                                        <mat-select formControlName="mcControl" name="mcControl" id="mcSelect" (selectionChange)="onMcChange($event)">
+                                            <mat-option [value]="option" id="mcOption{{option.id}}" *ngFor="let option of ((equipments | async) | byKeyValue:'category':'MC')">
+                                                {{ option.description }}</mat-option>
+                                        </mat-select>
+                                        <mat-error *ngIf="f.mcControl.invalid && (f.mcControl.dirty || f.mcControl.touched)" class="alert" align="end" id="error-mc">
+                                            <mat-error *ngIf="f.mcControl.errors.required" id="mcIdRequired"> <span i18n>Please select a</span> <strong i18n>Master Controller</strong> </mat-error>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </li>
+
+                                <li class="rooms">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label i18n>Enter number of rooms</mat-label>
+                                        <input formControlName="rooms" name="rooms" id="roomsNumber" type="number" matInput placeholder="Number of rooms" min="1" (change)="onRoomsNumberChange($event)">
+                                        <mat-error *ngIf="f.rooms.invalid && (f.rooms.dirty || f.rooms.touched)" class="alert" align="end" id="error-rooms">
+                                            <mat-error *ngIf="f.rooms.errors.required" id="roomsIdRequired"> <span i18n>Please enter</span> <strong i18n>number of rooms</strong></mat-error>
+                                            <mat-error *ngIf="f.rooms.errors.min" id="roomsMinRequired" i18n>Rooms number must be >= 1</mat-error>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </li>
+
+                                <li class="description">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label i18n>Enter Description</mat-label>
+                                        <textarea formControlName="description" name="description" matInput></textarea>
+                                    </mat-form-field>
+                                </li>
+                            </ul>
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+                    <div id="filterFCU" *ngIf="selectedType=='FCU'">
+
+                        <mat-form-field>
+                            <mat-label i18n>Pipes</mat-label>
+                            <mat-select name="pipes" [(ngModel)]="fi[selectedType].pipes" [ngModelOptions]="{standalone: true}" (selectionChange)="createFilter(selectedType)">
+                                <mat-option value=".+">Any</mat-option>
+                                <mat-option value="2P" i18n>2 Pipes</mat-option>
+                                <mat-option value="4P" i18n>4 Pipes</mat-option>
+                                <mat-option value="6P" i18n>6 Pipes</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label i18n>Speed control</mat-label>
+                            <mat-select name="speed" [(ngModel)]="fi[selectedType].speed" [ngModelOptions]="{standalone: true}" (selectionChange)="createFilter(selectedType)">
+                                <mat-option value=".+" i18n>Any</mat-option>
+                                <mat-option value="H" i18n>High Voltage</mat-option>
+                                <mat-option value="A" i18n>Analog Voltage</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label i18n>Valve control</mat-label>
+                            <mat-select name="valve" [(ngModel)]="fi[selectedType].valve" [ngModelOptions]="{standalone: true}" (selectionChange)="createFilter(selectedType)">
+                                <mat-option value=".+" i18n>Any</mat-option>
+                                <mat-option value="H(\d+)?V" i18n>High Voltage</mat-option>
+                                <mat-option value="A(\d+)?V" i18n>Analog Voltage</mat-option>
+                                <mat-option value="L(\d+)?V" i18n>Low Voltage</mat-option>
+
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+
+                    <div id="filterWS" *ngIf="selectedType=='Water Supply'">
+
+                        <mat-form-field>
+                            <mat-label i18n>Pipe</mat-label>
+                            <mat-select name="pipes" [(ngModel)]="fi[selectedType].pipes" [ngModelOptions]="{standalone: true}" (selectionChange)="createFilter(selectedType)">
+                                <mat-option value=".+" i18n>Any</mat-option>
+                                <mat-option value="HW" i18n>Hot Water</mat-option>
+                                <mat-option value="CW" i18n>Cold Water</mat-option>
+
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field>
+                            <mat-label i18n>Valve control</mat-label>
+                            <mat-select name="valve" [(ngModel)]="fi[selectedType].valve" [ngModelOptions]="{standalone: true}" (selectionChange)="createFilter(selectedType)">
+                                <mat-option [value]="'.+'" i18n>Any</mat-option>
+                                <mat-option [value]="'HV'" i18n>High Voltage</mat-option>
+                                <mat-option [value]="'AV'" i18n>Analog Voltage</mat-option>
+                                <mat-option [value]="'LV'" i18n>Low Voltage</mat-option>
+
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+
+                    <ul id="modelList">
+                        <li *ngFor="let equipment of ((equipments | async) | byKeyValue:'category':selectedType | byRegex:'model':filter)">
+                            <mat-card [ngClass]="{opacity: equipment.disabled}">
+                                <mat-toolbar [ngClass]="{'mat-primary': equipment.selected}">
+                                    <mat-card-title>
+                                        <label for="eq{{equipment.id}}" title="{{equipment.description}}">
+                                            {{equipment.model}}
+                                        </label>
+                                    </mat-card-title>
+                                    <label class="qtyLabel" *ngIf="equipment.selected">Qty:
+                                        <input [ngClass]="{quantityError: equipment.showQtyErrorClass}" type="number"
+                                            class="quantity" name="" id="qty{{equipment.id}}"
+                                            [value]="equipment.quantity" (keyup)="onQuantityChange($event,equipment)">
+                                    </label>
+                                </mat-toolbar>
+                                <mat-card-content>
+                                    <input [disabled]="equipment.disabled" type="radio" name="{{selectedType}}" id="eq{{equipment.id}}" [value]="equipment.id" (click)="onSelect($event)">
+                                    <label for="eq{{equipment.id}}" title="{{equipment.description}}">
+                                        <img id="img{{equipment.id}}"
+                                            src="https://conceptdraw.com/a1125c3/p1/preview/640/pict--hydraulic-schematic-retract-resistor-check-valve-application" />
+                                    </label>
+                                </mat-card-content>
+                            </mat-card>
+                        </li>
+                    </ul>
+
+
+                </mat-drawer-content>
+            </mat-drawer-container>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <a mat-raised-button back i18na mat-raised-button back i18n>Cancel</a>
+            <button type="button" mat-raised-button color="accent" *ngIf="editId" (click)="openSaveAsDialog()" i18n>Save
+                As</button>
+            <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid || locked">
+                <span *ngIf="!editId" i18n>Save</span>
+                <span *ngIf="editId" i18n>Update</span>
+            </button>
+        </mat-card-actions>
+
+    </mat-card>
+</form>

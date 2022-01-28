@@ -1,0 +1,26 @@
+.filters>* {
+    margin-right: 20px;
+}
+
+table tbody tr {
+    height: 60px;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: lightskyblue;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: lightcoral;
+}
+
+@media print {
+    mat-accordion {
+        display: none !important;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}

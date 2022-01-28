@@ -1,0 +1,155 @@
+.example-container {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+.example-card {
+    position: relative;
+    height: 100%;
+}
+
+.sideNav {
+    width: 200px;
+}
+
+.sideNavContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#equipmentType button {
+    display: flex;
+    width: 100%;
+}
+
+#equipmentType button span {
+    display: flex;
+    justify-content: space-between;
+}
+
+#modelList {
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 23% 23% 23% 23%;
+}
+
+#modelList img {
+    width: 100%;
+}
+
+#modelList button {
+    display: block;
+    width: 100%;
+}
+
+#modelList input[type=radio] {
+    visibility: hidden;
+}
+
+#modelList input[type=radio]+label {
+    border: 2px solid black;
+    background-color: lightgray;
+    display: block;
+}
+
+.mat-radio-button~.mat-radio-button {
+    margin-left: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 25%;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 1px;
+}
+
+#definition {
+    display: grid;
+    grid-template-areas: 'name name' 'controller rooms' 'description description' 'locked locked';
+    grid-gap: 20px;
+}
+
+#definition li.name {
+    grid-area: name;
+}
+
+#definition li.controller {
+    grid-area: controller;
+}
+
+#definition li.rooms {
+    grid-area: rooms;
+}
+
+#definition li.description {
+    grid-area: description;
+}
+
+#definition li.locked {
+    grid-area: nalockedme;
+}
+
+#definition li mat-form-field {
+    width: 100%;
+}
+
+.mat-drawer-container {
+    height: calc(100vh - 205px);
+}
+
+.qtyLabel {
+    width: 30%;
+}
+
+.quantity {
+    font-size: large;
+    text-align: center;
+    width: 33%;
+}
+
+.quantityError,
+.quantityError:focus {
+    outline-color: red;
+    border: solid red;
+}
+
+input[type=number].quantity::-webkit-inner-spin-button,
+input[type=number].quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mat-toolbar {
+    justify-content: space-between;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.generalData {
+    margin-bottom: 30px;
+}
+
+#reminingTerminals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status {
+    align-self: flex-end;
+}
+
+mat-card-title {
+    display: flex;
+    width: 50%;
+}

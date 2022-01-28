@@ -1,0 +1,1924 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="c14a54aedca96f79ebcdd63234c547a4a2c623e0" datatype="html">
+        <source>Clients List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="73b610ed3269ad4352d5263d965fc1bf37b53a6c" datatype="html">
+        <source>Sites List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="18d4727b52c2b60973600c0f0a6f99f53d77ed4f" datatype="html">
+        <source>Unit Type List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c91931aaea7754f76b4180a479885aa3347333ab" datatype="html">
+        <source>Unit Type Definition</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4f955c578df38c1a28a43e73445ed9e7eb43ed25" datatype="html">
+        <source>person</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../shared/src/app/components/toolbar/toolbar.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">title</note>
+      </trans-unit>
+      <trans-unit id="450e28e57284212c18cd3beb79b91cfea5a0d122" datatype="html">
+        <source>My Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../shared/src/app/components/toolbar/toolbar.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+        <source>Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../shared/src/app/components/toolbar/toolbar.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="313e61db1cd7445c9085215c2f13058f4548245d" datatype="html">
+        <source>Application title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../shared/src/app/components/toolbar/toolbar.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="71d3eb523581f9df56a9c33ed0e536ffbc9328ff" datatype="html">
+        <source>Client List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="20371277706eedf7fd8a3f51633ca5d801cd4fc2" datatype="html">
+        <source> Name </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-list.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cee911afa473c28606f5f2d87d799b11b7507e2f" datatype="html">
+        <source> Client Id </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="39413622819999e0b65a2ad27daf9ef6ea996dec" datatype="html">
+        <source> Country </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6d1cddbe2f61020230280a0543a70e48e43d9832" datatype="html">
+        <source> Status </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="59a8c38db3091a63ac1cb9590188dc3a972acfb3" datatype="html">
+        <source> Actions </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-list.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a130dcb0076037f6728cc10621484b88bae9aca3" datatype="html">
+        <source>Sites</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="70ef158c584bafe788e319a0bffa11b02ee9abf1" datatype="html">
+        <source>delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-list.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9d5a07483857e63e6175ccb9da7fcc1527f30e04" datatype="html">
+        <source>No Clients found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7089f7e169de8b0721b1ede28849e873ef0325de" datatype="html">
+        <source>Create Client</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/client-list.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/dialog-overview-example-dialog.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/dialog-overview-example-dialog.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-dialog.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-dialog.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/dialog-building.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/dialog-building.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-delete-dialog.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-delete-dialog.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-delete-dialog.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-delete-dialog.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/dialog-box-delete/dialog-box-delete.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/dialog-box-delete/dialog-box-delete.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-delete-dialog.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-delete-dialog.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="136321e1eebba3860e7444bfa04d5a9c6cbf51a9" datatype="html">
+        <source>Are you sure you want to delete this client ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/dialog-overview-example-dialog.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4e529ae5ffd73001d1ff4bbdeeb0a72e342e5c8" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client-list/dialog-overview-example-dialog.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-dialog.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/dialog-building.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-delete-dialog.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-delete-dialog.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/dialog-box-delete/dialog-box-delete.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-delete-dialog.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1e796d86a9862ad20e1e1bef0fad8f6400cc4459" datatype="html">
+        <source>Site List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="468098cdb75b02b4da340eac429a738c8c41a648" datatype="html">
+        <source> Site Id </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f82e73f3201baa7c3fdfffbf1f372683de7e7ea4" datatype="html">
+        <source> City </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e9ded9ddc67d3d863a5484c81550ee0de9b0ff04" datatype="html">
+        <source> Address </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6235fcfb8a91877690fb4c8dc3066cd505b800d3" datatype="html">
+        <source> Progress </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="234598e408f042c0291c6bd4b7735407de41f8c4" datatype="html">
+        <source> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="afcec85538f1aaaae8105b19200459f4f35401ff" datatype="html">
+        <source>Buildings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="874943277420590f5958559582f16dc25da558b9" datatype="html">
+        <source>Floor Layouts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d1eae8c113c30c7e9efa550a893e263b855dffe9" datatype="html">
+        <source>Offers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3416737ba2bf0b327118ccf52df072e89b926be1" datatype="html">
+        <source>No Sites found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cda31dbd724cf5f4fa7a4274d9120651490c8a8c" datatype="html">
+        <source>Back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="59243be646439dbd990f6217f97fcc29b1255364" datatype="html">
+        <source>Create Site</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-list.component.html</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adf493e873570ee88b8a95772b71580abfbc92a4" datatype="html">
+        <source>Are you sure you want to delete this site ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-list/site-dialog.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f36acbc4b980835f9da09648f1b8bc6f144c0007" datatype="html">
+        <source>Building List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0244be411931bcbc6231f73b10735a9b114720eb" datatype="html">
+        <source> for Site: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3137d67bb771eeb9ae636670d73bd706258ad1a7" datatype="html">
+        <source> Description </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="180a634139b5a8077e7b2ed53409d19d8ce0f065" datatype="html">
+        <source>Floors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a5c07c573f613010b19b54f308ad7c19b50d411f" datatype="html">
+        <source>No Buildings found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/building-list.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8a3f6abc2acbab730a1bf888e5c6dee75c17df02" datatype="html">
+        <source>Are you sure you want to delete this building ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building-list/dialog-building.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="948a105208b5034678a043bc82125c8679d32a16" datatype="html">
+        <source>Enter new Unit Type name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-save-as-dialog/unit-type-save-as-dialog.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="41307dd56fea669eed72e12a6c23af275f6bfd82" datatype="html">
+        <source>New Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-save-as-dialog/unit-type-save-as-dialog.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b752f143ab30faa45a2679b5e7a28bbf3fb246d" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-save-as-dialog/unit-type-save-as-dialog.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5c2b4c14b0264983cd5c58f3ee78b7c21c5629c8" datatype="html">
+        <source>Enter at least 3 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-save-as-dialog/unit-type-save-as-dialog.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-save-as-dialog/unit-type-save-as-dialog.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">114</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-save-as-dialog/unit-type-save-as-dialog.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">214</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/notes/notes.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4f9a4eb72b19ccbef730671ca211b944302a02b9" datatype="html">
+        <source>Create Unit Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-list.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7def05936db2e346661482608d96f0ad052fa90b" datatype="html">
+        <source>Edit Unit Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="72f17b72389b8bd4b0819f696b2eea8f63271d24" datatype="html">
+        <source>Remaining IO terminals</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a241f8c0fa4ce2d2e6a5481e7930c2c698145c11" datatype="html">
+        <source>This Unit Type is locked.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fdfea1946e5023466745bc6a5d3f86a29452c2c0" datatype="html">
+        <source>This Unit Type is unlocked.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7b893241f3d4652c9d698e9832506ed4226e7265" datatype="html">
+        <source>
+                                    General data
+                                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="03e8782301be388b2ed56d975aaad971001f221d" datatype="html">
+        <source>Enter name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="48b80bd8529479b3c595535ef4405ec16dc493e8" datatype="html">
+        <source>Please enter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adad3f53ffa74c6bbf933f0c344b0ffccda9c5fe" datatype="html">
+        <source>Select a Master Controller</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6bda3edc402b83fc24ca08c4dbde06f8d47f13f6" datatype="html">
+        <source>Please select a</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edba345a4d94cb833f818e6b1429d8f1068c3c3a" datatype="html">
+        <source>Master Controller</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dc0d793a699c9e4c6978ecec276304eed8d7ab1f" datatype="html">
+        <source>Enter number of rooms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6557d4784b87a7956ac82e7c2ef0a267b449302a" datatype="html">
+        <source>number of rooms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ff30f18e5e5c2e60605626b100cc9d5cc2cc29e8" datatype="html">
+        <source>Rooms number must be &gt;= 1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="188c528374438157f24c28654d23a235e8b50b38" datatype="html">
+        <source>Enter Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="05fe56b05175388b3adf9ecb2514fd1b7ace6130" datatype="html">
+        <source>Pipes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aade0d79c90c2e7631a5a7f16f28e4bef7f93d63" datatype="html">
+        <source>2 Pipes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b13933eb541ff93ae223adac3b30e537c87aa74d" datatype="html">
+        <source>4 Pipes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="231da105c609ccc0b5e69fa50f2afd729744c8ae" datatype="html">
+        <source>6 Pipes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="490d0c19824b13b71eee0165c2e9fff314770ffe" datatype="html">
+        <source>Speed control</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="16d449549ab7bc61caf3d636372a4a56b5870383" datatype="html">
+        <source>Any</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a2e664d9c3f990985eb36a138ea7ead402f727ba" datatype="html">
+        <source>High Voltage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fc7bf3011f8fa9b085535f387bbf9c2d36ad27ca" datatype="html">
+        <source>Analog Voltage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cb9b11e6769581a1d62a1bd8b29181bf51c39ad3" datatype="html">
+        <source>Valve control</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6d2043b57b48010689271dd4e6f0fc7903edbf3a" datatype="html">
+        <source>Low Voltage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f7dadb737c27242b13df72c48b91829f29b9c270" datatype="html">
+        <source>Pipe</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d30ac072651bd525a66e6fb520e5435b1a5f4482" datatype="html">
+        <source>Hot Water</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">158</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="05c50b1a589f9ae228e7451df3ebc16438d39dd7" datatype="html">
+        <source>Cold Water</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2d43009ef8493ca734f2e58430a4d1be40796aff" datatype="html">
+        <source>Save
+                As</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="047f50bc5b5d17b5bec0196355953e1a5c590ddb" datatype="html">
+        <source>Update</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type/unit-type.component.html</context>
+          <context context-type="linenumber">215</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="40fd4bdde0ef90ea2479d20817245393f4fb2956" datatype="html">
+        <source> Unit Type List </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f1589c5fbc4b15bddade751dce731cb9a273b2d1" datatype="html">
+        <source> Rooms </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-list.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b159241b09d57c2a84602485bbada7416519fee2" datatype="html">
+        <source>No Unit Types found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-list.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="41e4f0512be19651bde9c6f82d9990a6df5238a8" datatype="html">
+        <source>Are you sure you want to delete this unit Type ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/unitType/unit-type-list/unit-type-delete-dialog.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2133fac441309101186aa732a39ad5379214a123" datatype="html">
+        <source>Floor Layout Definition</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="db1cd9084cfc10dce62541e791918bac6db0a14d" datatype="html">
+        <source>This Floor Layout is locked.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8e757f1ed05c028a542b13dfee9503bb7cad7e39" datatype="html">
+        <source>Name is required
+                        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3eef997be189f37d8748de8697200a8b4e0a3bdc" datatype="html">
+        <source>Name must be at least 3 characters long
+                        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4733069d2a8fd590e819f52ca5730fd3232f4dbb" datatype="html">
+        <source>Drag and drop file here</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="053e81597467a642e04109eebe934c84e6a1f467" datatype="html">
+        <source>or</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d08cf0622d59b013305163275312ab53bf042b43" datatype="html">
+        <source>Browse for file</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ce244a63672fd403d271f332e4cbedb8b53060fc" datatype="html">
+        <source>Upload is required </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7a50ee80f66dbe90639e64ceb57a7226aae83a48" datatype="html">
+        <source>You have not accepted Site offer for this Site.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout/floor-layout.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5407ecb4896ae10597ae9931818757460e653033" datatype="html">
+        <source>Floor Layout List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a2e01dc9f287775608e4d25d624df38080ca0a7d" datatype="html">
+        <source> Id </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="da5bd1010f0115ed629707c0d21bd5c51c0bb02b" datatype="html">
+        <source>No Floor Layouts by Site found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="93306cb66066876f8dead706543b258e82d1a717" datatype="html">
+        <source>Create Floor Layout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-list.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7146d89aa735be833424c72e8bcecf3879377c4a" datatype="html">
+        <source>Are you sure you want to delete this Floor Layout ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floorLayout/floor-layout-list/floor-layout-delete-dialog.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="42cf55936095296a52d1fdcc2c37a16ff758035b" datatype="html">
+        <source>Edit Floor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor/floor.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c0b25c483101bec5d4e2a223f2945284c5044105" datatype="html">
+        <source>Create Floor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor/floor.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2cbf92e15a44289147a2f190d93478abbe90a907" datatype="html">
+        <source>Are you sure you want to delete this floor ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/dialog-box-delete/dialog-box-delete.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4652672fd76c688fa141c0b392124585bdb58759" datatype="html">
+        <source>Floor List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d9a85e53345e2c79428996a827b943faabac03f7" datatype="html">
+        <source> for Building: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b2fef918da45bb358901583655189dab4e6e68d4" datatype="html">
+        <source> Floor Number </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5e024c2113a5b01b5869a624f8604ba2fa4679d7" datatype="html">
+        <source> Floor Name </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a2c08639055a628ef4c5bf18398d1477beb1ea0e" datatype="html">
+        <source> Floor Layout </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ef9b2f801839561ce5beb673f5757e981f68f6e" datatype="html">
+        <source>No Floors found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/floor-list/floor-list.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5eaec80345512c7f34f353b4fd9e9d4d29f40387" datatype="html">
+        <source>Edit Building</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="68c4e26bc98a8a016a4fc2ba225f9a3e02bb839d" datatype="html">
+        <source>Create Building</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e3fe1b43058d4bb90f90582b72784603d6887670" datatype="html">
+        <source>Name must be at least 2 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/building/building/building.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="45209b1108ca949b96664e77426803db4cb644a5" datatype="html">
+        <source>Edit Client</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c89faab09691e354296408e62bd669321bba412b" datatype="html">
+        <source>Client Details:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="85df739f49ed58facd9edf26b8bcec5f74eb11d0" datatype="html">
+        <source>Client Id</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="84dbcb7af3cdd06631a2e8a3a44387aa4d8ebec4" datatype="html">
+        <source>Client Id is required
+                            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="209cd171ec5c300f9a4b5dab999565d143ff2ba7" datatype="html">
+        <source>Client Id must be number
+                            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c82af1b7c42ac762eecb3e8b961d701771ce5ce0" datatype="html">
+        <source>Name must be at least 4 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="57646ac84c2171c1f85bd277427391e8a3b0c4ee" datatype="html">
+        <source>Contact Information:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6934d8edd276d59e050006fe91b695ebad0218f8" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2af850cec5249d05312fe88d76b8b64a02791d30" datatype="html">
+        <source>Email is not valid</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="77d1599df7c49bca99809fb3cce8e3856968d458" datatype="html">
+        <source>Address:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="729754dd19eb9ce0670b0aeb5a6ae60574c2c563" datatype="html">
+        <source>Address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a43f25a9ac40e8e2441ff0be7a36b8e5d15534df" datatype="html">
+        <source>Country</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5c7012b5a926b32d9e45fefdcc8a1a3cb6f023d0" datatype="html">
+        <source>City</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4abb0523a9b200b6daaffd6eb3cb1c81b60afdf0" datatype="html">
+        <source>Bank Details:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b3c4ec0c45907566925bb2080d1667b641acd14f" datatype="html">
+        <source>Bank Account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dcf35f191c0f3861cb5a3a90c6106c8cbfb8a806" datatype="html">
+        <source>Bank Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cc0c2fbe40d763b704c6735563c2841fc62aba2d" datatype="html">
+        <source>Bank Country</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0339cb83a055bf0369e780714344515f54ab1ce9" datatype="html">
+        <source>Choose a status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="85507b428a52f9f6f9933ad826f7e67f12e5b4ea" datatype="html">
+        <source>Status is required
+                    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/client/client/client.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e7259b6e2975f13a786b35155a39dd247452bbb4" datatype="html">
+        <source>Edit Site </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a29c8a6cec50a2dffd818e4dc667d428f24ea51f" datatype="html">
+        <source>Create Site </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7b254080edd508da661f304972222b30606564e1" datatype="html">
+        <source>Site Information:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8aaf0cc8971664ccbc98cd98204cbc02a8345edc" datatype="html">
+        <source>Site Id</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d35135addaa6ab73737d86f781185f99553f405c" datatype="html">
+        <source>Site Id is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4268396f4abc41c46294c065302ece8d7e29c73c" datatype="html">
+        <source>Site Id must be number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a73db0a2d8690f0fdb9fc02bc236eb23b54ca5af" datatype="html">
+        <source>Serial number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site/site.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2f0d6fd5ef53d0093468a17f88ca507b1af1cfed" datatype="html">
+        <source>Send Offer to: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e2c8f8048544457d662b2ac145da670de270ec95" datatype="html">
+        <source>To:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9b2fd2a81342b5821f47ce0e6f2383b1403fd659" datatype="html">
+        <source>Email is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c01e525677fb4342f237da7c08e511cc9684f548" datatype="html">
+        <source>Email is invalid</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4e232c3f05990630360bcf22f0b3b2301e8106e9" datatype="html">
+        <source>Subject:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8d5019bec62f85514a65c0c576cf3f09fa8f50a8" datatype="html">
+        <source>Subject is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8865ed3834a850ae6123ce54f380aac3f0b88fe2" datatype="html">
+        <source>Message:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e3c6e070aef7876e94c9e9316ee6d9865c12f579" datatype="html">
+        <source>Message is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2c5ff8fa9c9aaec93f97e37c9a0edcd797194573" datatype="html">
+        <source>Send</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/send-mail-dialog/send-mail-dialog.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fcde58253a4cfd52c228eebdae74e1be7a1ab714" datatype="html">
+        <source>Notes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/notes/notes.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5c54befce78d70e20c215f10a00e617245f53bc9" datatype="html">
+        <source>Note</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/notes/notes.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9eb78e2c93a6736dc5f64a0240db40544630c4b0" datatype="html">
+        <source>Enter at least 3 characters.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/notes/notes.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="90d0868c820f998fcf7a8a33ded93661acb493ec" datatype="html">
+        <source>Created by: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/notes/notes.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f73331ab60eac7370ce5873eb8dea59e961b6130" datatype="html">
+        <source>at:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/notes/notes.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d0b17ba44fc7b9d3876e41951ffa821d85ac794f" datatype="html">
+        <source>Create Site Offer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="86f1af0aa323c2a6693cf8213b864f7bcd058ab7" datatype="html">
+        <source>Edit Site Offer </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2789d5d52a9886e206b1486e12a17cd1ad5a75fa" datatype="html">
+        <source> for </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c9039b1b13b3ef165b66b3c5d79f810ab1ebb050" datatype="html">
+        <source>Open</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cef1d79eace5eb4d2243fad36730e3e65c757bee" datatype="html">
+        <source>Sent</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7823909fb1d8d313382f6f4bd842f1a7ef6f08d1" datatype="html">
+        <source>Accepted</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2310400448b90e879fb988300d6839eb9316edf8" datatype="html">
+        <source>Declined</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b5a7564e37b868259d5cba6219389ebcc07f34d2" datatype="html">
+        <source>
+                                General Data
+                            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="42cb436772601e71b9b9bef83143ccbd844750e4" datatype="html">
+        <source>Name is</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9c778bb17e385f590272ad4be2c3eb6c7c12291e" datatype="html">
+        <source>Name must be 3 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5c2c1c5da6206901ca0f5d37fa77961a98746b66" datatype="html">
+        <source>Number of Buildings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="905509330f75d1be962200729994e3515f345eeb" datatype="html">
+        <source>Number is</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d95f3fc656f3b33f9c097c7bf7ce0946c53e517d" datatype="html">
+        <source>Number of buildings must be &gt;= 0</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="328c3946106f99d49572076171ad3c5acbc08125" datatype="html">
+        <source>Number of Receptions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3d06b5970814d1b48639255cacb93073ebc4112c" datatype="html">
+        <source>Number of receptions must be &gt;= 0</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5454e5928d24533e92daaac516f9540ff36702d1" datatype="html">
+        <source>
+                                Unit Type
+                            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c4759960bd315167e2dd7ca2acf3cbf20f841edc" datatype="html">
+        <source>Available Unit Types</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5057eda54f6b0620024f9f15683fd594c721cd7d" datatype="html">
+        <source>Selected Unit Types</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="132314f59ecfeca582c8e0469cc21c4c05c82504" datatype="html">
+        <source>Drag &amp; Drop</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c51f03619456e4d33caf65222ed4c15f420b796" datatype="html">
+        <source>items here from Available Unit Types list.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca30c1aa79fb5ab487fbd2caa4ca01f2f6691d70" datatype="html">
+        <source>Quantity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="54e76c7e01ecc60ae7ab560f523d4e8f724d6f91" datatype="html">
+        <source>
+                                Additional Equipment
+                            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7bd9bb8368247e8fed745d04c2b1df1e54fcf537" datatype="html">
+        <source>Available Equipments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="750aa741fbfb1b840cad9ca08a7ce3219d5ca8f5" datatype="html">
+        <source>Selected Equipments</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e7a69ba81ededf98b74957f14f71d8f853114a9f" datatype="html">
+        <source>items here from Available Equipments list.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="96b44639b1b6516f376349bd20fbc512fdb216ec" datatype="html">
+        <source>Drag the offer in pdf format.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9f96bda4adbd45c4b7a697d92b3e9d96021130b4" datatype="html">
+        <source>Send Offer to the
+                        client</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faa55d403a19d9032c659bc1881a53c4face8a33" datatype="html">
+        <source>Export to
+                    excel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="70a67e04629f6d412db0a12d51820b480788d795" datatype="html">
+        <source>Create</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6fc5e65900ae1415d3170d5d2842f0dcae1b6645" datatype="html">
+        <source>Accept</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ce3bb7411069c96e2065502c115323680e7f1ce0" datatype="html">
+        <source>Decline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer/site-offer.component.html</context>
+          <context context-type="linenumber">178</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7a3aaa5a1f35d55533773f2c8dac0af957480d7b" datatype="html">
+        <source>Site Offers List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4b6aab357a4fc2836a4a1abbfc97190d02652e59" datatype="html">
+        <source> Offer Name </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="733763a0ce169335a302ad2936eb0606ceefe1af" datatype="html">
+        <source> Client</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3bceb6c3192ab2fb2f2e591d6730e7784f3b05fa" datatype="html">
+        <source> Site</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f3ab141a02057a7853b9cde7dea17eef6811e27a" datatype="html">
+        <source> Status</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e91c42d7632a88839fa86999fec2b8442dd10c55" datatype="html">
+        <source>No Site Offer by Site found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-list.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="68195fc7636ea5515719a376ccbedb63953b0edc" datatype="html">
+        <source>Are you sure you want to delete this Site Offer ?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/siteOffer/site-offer-list/site-offer-delete-dialog.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aef99f31460a3566da6b3cd70e6e30410bebfd18" datatype="html">
+        <source>Choose a Floor Layout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="54754e093293f08952f8c80674e52bb9df70efce" datatype="html">
+        <source>Floor Layout is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9fa6655f367591ba82d05f77c1bf17a693a6615e" datatype="html">
+        <source>Prefix</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5e6548eb9cbb0467c307b4079bc989cd21f44355" datatype="html">
+        <source>This field is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="724054cf5df392fd8c7c31b302342e99baed23f0" datatype="html">
+        <source>From Floor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c16acce415f58f4a940a1ed01fa49d9cbdf01268" datatype="html">
+        <source>This must be number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5bb030c2eb79f30ca7038bfaa70cbf5ffbf884c1" datatype="html">
+        <source>To Floor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f6755cff4957d5c3c89bafce5651f1b6fa2b1fd9" datatype="html">
+        <source>Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/bulk-floor/bulk-floor.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="36897b37487f45212e047c09aa72d198b60782c0" datatype="html">
+        <source>Floor Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b30b1b384c1359b05acd4de17ea66f3bcb49584" datatype="html">
+        <source>Floor Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d928e03223768f164eb19a7728f9e0f98888aee1" datatype="html">
+        <source>Floor Name must be at least 2 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9819babc85fd22f119703367d2150e25c98642de" datatype="html">
+        <source>Floor Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="68f7c0c222ac451eea46849b8698029de1bcf6b9" datatype="html">
+        <source>Floor Number is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9760590108c74e3479dbbfc305de8defca2eea3f" datatype="html">
+        <source>Floor Number must be numeric</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/floor/create-floor/create-floor.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="246d3990ae4dd26e9f926f45470c368ac744859b" datatype="html">
+        <source>Definition</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-status/site-status.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="83f562357598f2019ee3f24b41e328b5706884f5" datatype="html">
+        <source>Commissioning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-status/site-status.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="abae9d50576cc90073e0c20cd43ae4ea3cf9edc8" datatype="html">
+        <source>Provisioning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-status/site-status.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d798abaa83e0ae9e050f688286a930cf7538af68" datatype="html">
+        <source>Operational</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/site/site-status/site-status.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

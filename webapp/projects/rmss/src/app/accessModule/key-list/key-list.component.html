@@ -1,0 +1,70 @@
+<mat-card class="ved flex">
+
+  <mat-card-header>
+      <mat-toolbar color="primary">
+          <mat-card-title vedTitle i18n> Key List </mat-card-title>
+      </mat-toolbar>
+  </mat-card-header>
+
+
+  <mat-card-content>
+    
+      <mat-form-field class="example-full-width">
+        <mat-label i18n>Filter by Key Number or Description</mat-label>
+        <input matInput [formControl]="keyNumber" id="filterKey" class="filterKey">
+      </mat-form-field>
+  
+      <table mat-table [dataSource]="keys" #mytable class="my-table keysTable" *ngIf="keys.length > 0">
+
+          <!-- key Number Column -->
+          <ng-container matColumnDef="key_no">
+              <th mat-header-cell *matHeaderCellDef i18n> Key number </th>
+              <td mat-cell *matCellDef="let element"> {{element.key_no}} </td>
+          </ng-container>
+
+          <!-- Key Description Column -->
+          <ng-container matColumnDef="description">
+              <th mat-header-cell *matHeaderCellDef i18n> Description </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+          </ng-container>
+
+          <!-- Key Type Column -->
+          <ng-container matColumnDef="key_type">
+            <th mat-header-cell *matHeaderCellDef i18n> Key Type </th>
+            <!-- <td mat-cell *matCellDef="let element"> {{element.key_type}} </td> -->
+            <td mat-cell *matCellDef="let element"> {{ getType(element.key_type) }} </td>
+          </ng-container>
+
+          <!-- Valid From Column -->
+          <ng-container matColumnDef="valid_from">
+            <th mat-header-cell *matHeaderCellDef i18n> Valid From </th>
+            <td mat-cell *matCellDef="let element"> {{element.valid_from * 1000 | date:'MM/dd/yyyy'}} </td>
+          </ng-container>
+
+          <!-- Valid To Column -->
+          <ng-container matColumnDef="valid_to">
+            <th mat-header-cell *matHeaderCellDef i18n> Valid To </th>
+            <td mat-cell *matCellDef="let element"> {{element.valid_to * 1000 | date:'MM/dd/yyyy'}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Action">
+              <th mat-header-cell *matHeaderCellDef i18n> </th>
+              <td mat-cell *matCellDef="let element" class="actions">
+                  <!-- <button i18n-title id="deleteBtn" title="delete" (click)="openDialog(element)" mat-button stopPropagation mat-raised-button color="warn" class="{{ 'del-' + element.id }}">
+                      <mat-icon> delete_forever</mat-icon>
+                  </button> -->
+              </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="['key_no', 'description', 'key_type', 'valid_from', 'valid_to', 'Action']"></tr>
+           <tr mat-row *matRowDef="let key; columns: ['key_no', 'description', 'key_type', 'valid_from', 'valid_to', 'Action'];" [routerLink]="['/key', key.id]" id="{{'edit-' + key.id }}"></tr> 
+      </table>
+
+      <p *ngIf="keys.length==0" i18n>No Keys Found</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+      <a [routerLink]="['/key/new']" mat-raised-button color="primary" id="addKey" i18n>Create Key</a>
+  </mat-card-actions>
+
+</mat-card>

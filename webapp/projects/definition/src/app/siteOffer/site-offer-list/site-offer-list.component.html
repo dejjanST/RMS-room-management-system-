@@ -1,0 +1,67 @@
+<mat-card class="ved flex">
+
+    <mat-toolbar color="primary">
+        <mat-card-title>
+            <span vedTitle i18n>Site Offers List</span>
+            <span i18n> for Site: </span>
+            <span *ngIf="globalService.site.data$ | async as site">{{site.name}}</span>
+        </mat-card-title>
+    </mat-toolbar>
+
+
+    <mat-card-content>
+        <table mat-table *ngIf="siteOffers.length>0" [dataSource]="siteOffers" #mytable class="my-table offersTable">
+
+            <!-- Client Name Column -->
+            <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef i18n> Offer Name </th>
+                <td mat-cell *matCellDef="let element" id="{{ 'name-' + element.id }}"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Client">
+                <th mat-header-cell *matHeaderCellDef i18n> Client</th>
+                <td mat-cell *matCellDef="let element"> {{element.client_code}} - {{element.client_name}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="Site">
+                <th mat-header-cell *matHeaderCellDef i18n> Site</th>
+                <td mat-cell *matCellDef="let element"> {{element.site_code}} - {{element.site_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Status">
+                <th mat-header-cell *matHeaderCellDef i18n> Status</th>
+                <td mat-cell *matCellDef="let element">
+                    <mat-chip-list>
+                        <mat-chip *ngIf="element.status===1">Open</mat-chip>
+                        <mat-chip color="accent" selected *ngIf="element.status===2">Sent</mat-chip>
+                        <mat-chip color="accepted" selected *ngIf="element.status===3">Accepted</mat-chip>
+                        <mat-chip color="warn" selected *ngIf="element.status===4">Declined</mat-chip>
+                    </mat-chip-list>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Action">
+                <th mat-header-cell *matHeaderCellDef i18n> Actions </th>
+                <td mat-cell *matCellDef="let element" class="actions">
+                    <button type="button" (click)="openDialog(element)" [disabled]="element.disabled" mat-button stopPropagation mat-raised-button color="warn" class="deleteBtn" id="{{ 'del' + element.id }}" i18n-title title="delete">
+                        <mat-icon> delete_forever</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['Name', 'Client', 'Site', 'Status', 'Action']"></tr>
+            <tr mat-row *matRowDef="let siteOffer; columns: ['Name', 'Client', 'Site', 'Status', 'Action'];" class="SORow" id="SO{{ siteOffer.id }}" [routerLink]="['/sites', siteId, 'offers', siteOffer.id]">
+            </tr>
+        </table>
+
+
+        <p *ngIf="siteOffers.length===0" i18n>No Site Offer by Site found</p>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-raised-button back i18n>Back</a>
+        <a mat-raised-button id="create" color="primary" [routerLink]="['new']" i18n>Create Site Offer</a>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,58 @@
+<mat-card class="ved flex">
+
+    <mat-card-header>
+        <mat-toolbar color="primary">
+            <mat-card-title vedTitle i18n> Group List </mat-card-title>
+        </mat-toolbar>
+    </mat-card-header>
+
+
+    <mat-card-content>
+        <mat-form-field class="example-full-width">
+            <mat-label i18n>Filter by Group Name</mat-label>
+            <input matInput placeholder="Group name" [(ngModel)]="groupName" #inputGroupName id="filterByName">
+        </mat-form-field>
+
+        <table mat-table [dataSource]="groups" #mytable class="my-table groupsTable" *ngIf="groups.length > 0">
+
+            <!-- Client Name Column -->
+            <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef i18n> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Client Id Column -->
+            <ng-container matColumnDef="Type">
+                <th mat-header-cell *matHeaderCellDef i18n> Type </th>
+                <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+            </ng-container>
+
+            <!-- Color Column -->
+            <ng-container matColumnDef="Color">
+                <th mat-header-cell *matHeaderCellDef i18n> Color </th>
+                <td mat-cell *matCellDef="let element">
+                    <div class="circle" [style.background-color]="element.color"></div>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Action">
+                <th mat-header-cell *matHeaderCellDef i18n> </th>
+                <td mat-cell *matCellDef="let element" class="actions">
+                    <button i18n-title class="deleteBtn" title="delete" (click)="openDialog(element)" mat-button stopPropagation mat-raised-button color="warn" id="{{ 'del-' + element.id }}">
+                        <mat-icon> delete_forever</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['Name', 'Type', 'Color', 'Action']"></tr>
+            <tr mat-row *matRowDef="let group; columns: ['Name', 'Type', 'Color', 'Action'];" [routerLink]="['/groups', group.id]" id="{{'edit-' + group.id }}"></tr>
+        </table>
+
+        <p *ngIf="groups.length==0" i18n>No Groups found</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a [routerLink]="['/groups/new']" mat-raised-button color="primary" id="addGroup" i18n>Create Group</a>
+    </mat-card-actions>
+
+</mat-card>

@@ -1,0 +1,23 @@
+form {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+}
+
+form>* {
+    margin-bottom: 10px;
+}
+
+form :first-child {
+    margin-bottom: 0;
+}
+
+#cameraBtns {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cameraBtns>* {
+    width: 100px;
+    flex-grow: 1;
+}

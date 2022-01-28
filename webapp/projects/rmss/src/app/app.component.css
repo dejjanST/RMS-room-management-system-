@@ -1,0 +1,32 @@
+#menuToggle {
+    position: absolute;
+    z-index: 1;
+}
+
+#sideBarInner {
+    margin-top: 45px;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+a>mat-icon {
+    color: rgba(0, 0, 0, .87);
+}
+
+#siteName {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  opacity: 0.5;
+}
+
+#siteName span {
+  font-size: 14px;
+  text-transform: lowercase;
+}

@@ -1,0 +1,55 @@
+<mat-card class="ved flex">
+    <mat-toolbar color="primary">
+        <mat-card-title>
+            <span vedTitle i18n>Floor List</span>
+            <span i18n> for Building: </span>
+            <span *ngIf="globalService.building.data$ | async as b">{{ b.name }}</span>
+        </mat-card-title>
+    </mat-toolbar>
+
+
+    <mat-card-content>
+
+        <table mat-table [dataSource]="floors.data" #mytable class="my-table floorTable" *ngIf="floors.data.length>0">
+            <!-- Floor Number Column -->
+            <ng-container matColumnDef="floor_number">
+                <th mat-header-cell *matHeaderCellDef i18n> Floor Number </th>
+                <td mat-cell *matCellDef="let element"> {{element.floor_no}} </td>
+            </ng-container>
+
+            <!-- Floor Name Column -->
+            <ng-container matColumnDef="floor_name">
+                <th mat-header-cell *matHeaderCellDef i18n> Floor Name </th>
+                <td mat-cell *matCellDef="let element" id="{{ 'name-' + element.id }}"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Floor Layout Column -->
+            <ng-container matColumnDef="floor_layout">
+                <th mat-header-cell *matHeaderCellDef i18n> Floor Layout </th>
+                <td mat-cell *matCellDef="let element">
+                    <img mat-card-image src="/files/{{ element.floor_layout_fileid }}" />
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef i18n> Actions </th>
+                <td mat-cell *matCellDef="let element" class="actions">
+                    <button i18n-title title="delete" mat-button (click)="openDialog(element)" stopPropagation mat-raised-button color="warn" id="{{ 'delete-' + element.id }}">
+                        <mat-icon> delete_forever</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['floor_number', 'floor_name', 'floor_layout', 'action']"></tr>
+            <tr mat-row *matRowDef="let floor; columns: ['floor_number', 'floor_name', 'floor_layout', 'action'];" [routerLink]="['/buildings', buildingId, 'floors', floor.id]" id="{{ 'editFloor-' + floor.id }}"></tr>
+
+        </table>
+
+        <p *ngIf="floors.data.length===0" i18n>No Floors found</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <a mat-raised-button back i18n>Back</a>
+        <a [routerLink]="[ '/buildings', buildingId, 'floors', 'new']" mat-raised-button color="primary" id="addFloor" i18n>Create Floor</a>
+    </mat-card-actions>
+</mat-card>

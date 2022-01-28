@@ -1,0 +1,83 @@
+<form [formGroup]="form" (ngSubmit)="save()" id="siteForm" class="flex">
+    <mat-card class="ved">
+        <mat-toolbar color="primary">
+            <mat-card-title>
+                <span i18n *ngIf="siteId" vedTitle>Edit Site </span>
+                <span i18n *ngIf="!siteId" vedTitle>Create Site </span>
+                <span>{{ client.data.name }}</span>
+            </mat-card-title>
+        </mat-toolbar>
+
+        <mat-card-content>
+
+            <input value="id" formControlName="client_id" name="client_id" type="hidden">
+
+
+            <legend i18n>Site Information:</legend>
+
+            <div class="fieldGroup">
+
+                <div class="code">
+                    <span matPrefix>{{ companyId }}&nbsp;</span>
+                    <mat-form-field class="full-width">
+                        <mat-label i18n>Site Id</mat-label>
+                        <input matInput formControlName="site_id" name="site_id" class="site_id">
+                        <mat-error *ngIf="f.site_id.invalid && (f.site_id.dirty || f.site_id.touched)" class="alert" align="end" id="error-siteId">
+                            <mat-error *ngIf="f.site_id.errors.required" id="siteIdRequired" i18n>Site Id is required</mat-error>
+                            <mat-error *ngIf="f.site_id.errors.pattern" id="validateIdNumeric" i18n>Site Id must be number</mat-error>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <mat-form-field class="full-width">
+                    <mat-label i18n>Name</mat-label>
+                    <input matInput formControlName="name" name="name" class="siteName">
+                    <mat-error *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert" align="end" id="error-siteName">
+                        <mat-error *ngIf="f.name.errors.required" id="siteNameRequired" i18n>Name is required</mat-error>
+                        <mat-error *ngIf="f.name.errors.minlength" id="siteNameLength" i18n>Name must be at least 3 characters long
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field *ngIf="siteId" class="full-width">
+                    <mat-label i18n>Serial number</mat-label>
+                    <input matInput readonly formControlName="serial_no" name="serial_no" class="siteName">
+                </mat-form-field>
+                <button *ngIf="siteId" mat-icon-button type="button" title="Copy to clipboard" [cdkCopyToClipboard]="form.get('serial_no').value">
+          <mat-icon>content_copy</mat-icon>
+        </button>
+
+
+
+            </div>
+
+            <legend i18n>Address:</legend>
+
+
+            <mat-form-field class="full-width">
+                <mat-label i18n>Address</mat-label>
+                <input matInput formControlName="address" name="address" class="address">
+            </mat-form-field>
+
+            <div class="fieldGroup">
+                <mat-form-field class="full-width">
+                    <mat-label i18n>City</mat-label>
+                    <input matInput formControlName="city" name="city" class="city">
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label i18n>Country</mat-label>
+                    <input matInput formControlName="country" name="country" class="country">
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <a mat-raised-button back i18n>Cancel</a>
+            <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">
+        <span *ngIf="!siteId" i18n>Save</span>
+        <span *ngIf="siteId" i18n>Update</span>
+      </button>
+        </mat-card-actions>
+    </mat-card>
+</form>

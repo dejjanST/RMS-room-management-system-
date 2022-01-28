@@ -1,0 +1,19 @@
+mat-form-field {
+    margin-right: 10px;
+    width: 100%;
+}
+
+#firstMatOption {
+    height: auto;
+}
+
+#noKeys {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.mat-card {
+    padding: 0px;
+    margin-top: 100px;
+    width: 600px;
+}

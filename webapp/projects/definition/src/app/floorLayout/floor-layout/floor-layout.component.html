@@ -1,0 +1,106 @@
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate class="flex">
+    <mat-card class="ved">
+        <mat-toolbar color="primary">
+            <mat-card-title vedTitle i18n>Floor Layout Definition</mat-card-title>
+            <mat-chip-list>
+                <mat-chip color="accent" selected *ngIf="responseFloorLayout.data.locked" i18n>This Floor Layout is locked.
+                </mat-chip>
+            </mat-chip-list>
+        </mat-toolbar>
+
+
+        <mat-card-content>
+            <div id="unitType">
+                <mat-form-field id="name">
+                    <mat-label i18n>Name</mat-label>
+                    <input formControlName="name" id="FLName" [readonly]="responseFloorLayout.data.locked" matInput>
+                    <mat-error *ngIf="form.controls.name.invalid && (form.controls.name.dirty || form.controls.name.touched)" class="alert" align="end" id="error-clientName">
+                        <mat-error *ngIf="form.controls.name.errors.required" id="validateNameRequired" i18n>Name is required
+                        </mat-error>
+                        <mat-error *ngIf="form.controls.name.errors.minlength" id="validateNameLength" i18n>Name must be at least 3 characters long
+                        </mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="dropzone" dnd (fileDropped)="fileBrowseHandler($event)" *ngIf="!responseFloorLayout.data.locked">
+                    <input type="file" id="image" accept="image/*" #fileDropRef [readonly]="responseFloorLayout.data.locked" (change)="fileBrowseHandler($event)" />
+                    <img src="assets/ic-upload-file.svg" />
+                    <p i18n>Drag and drop file here</p>
+                    <p i18n>or</p>
+                    <label mat-raised-button for="image" i18n>Browse for file</label>
+                    <mat-error *ngIf="form.controls.fileId.invalid && (form.controls.fileId.dirty || form.controls.fileId.touched)" class="alert" align="end" id="error-clientFileId">
+                        <mat-error *ngIf="form.controls.fileId.errors.required" id="validateFileIdRequired" i18n>Upload is required </mat-error>
+                    </mat-error>
+                </div>
+
+                <mat-chip-list aria-label="Fish selection" id="unitTypeList" *ngIf="!responseFloorLayout.data.locked">
+                    <mat-chip *ngFor="let unitType of unitTypeList">
+                        <span>{{unitType.name}}</span>
+                        <button mat-mini-fab color="primary" type="button" class="utBtns" id="ut{{unitType.id}}Btn" (click)="addToLayout(unitType)"> + </button>
+                    </mat-chip>
+                </mat-chip-list>
+
+                <a *ngIf="unitTypeList.length===0" [routerLink]="['../../offers']" i18n>You have not accepted Site offer for this Site.</a>
+
+            </div>
+
+            <div id="fld">
+                <img *ngIf="form.get('fileId').value" [src]="floorImgUrl$ | async" alt="" srcset="">
+                <div formArrayName="RCUnitTypes">
+                    <ul>
+                        <li id="widgetRC{{i}}" *ngFor="let item of RCUnitTypesFormArray.controls; let i=index" [formGroupName]="i" [ngStyle]="{'transform': item.value.unitType.unitDetails.transform()}" cdkDragBoundary="#fld" class="widget" cdkDrag [cdkDragDisabled]="responseFloorLayout.data.locked"
+                            (cdkDragEnded)="dragEnd($event, item.value.unitType)">
+                            <h2 [title]="item.value.unitType.name">{{item.value.unitType.name}}</h2>
+
+                            <div>
+                                <ul>
+                                    <li><label>Ind:</label> <input type="number" class="index" formControlName="index" [ngClass]="{indexInput: item.get('index').errors}" [readonly]="responseFloorLayout.data.locked">
+                                    </li>
+                                    <li><label>X: </label><input type="number" readonly min="0" max="1920" [value]="item.value.unitType.unitDetails.positionX" (change)="onPositionChange($event,item,'x')"></li>
+                                    <li><label>Y: </label><input type="number" readonly min="0" max="1080" [value]="item.value.unitType.unitDetails.positionY" (change)="onPositionChange($event,item,'y')"></li>
+                                </ul>
+                                <button *ngIf="!responseFloorLayout.data.locked" mat-icon-button color="warn" type="button" id="widgetRC{{i}}DelBtn" (click)=deleteUnitType(RCUnitTypesFormArray,i)>
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div formArrayName="CCACUnitTypes">
+                    <ul>
+                        <li id="widgetCCAC{{i}}" *ngFor="let item of CCACUnitTypesFormArray.controls; let i=index" [formGroupName]="i" [ngStyle]="{'transform': item.value.unitType.unitDetails.transform()}" cdkDragBoundary="#fld" class="widget" cdkDrag [cdkDragDisabled]="responseFloorLayout.data.locked"
+                            (cdkDragEnded)="dragEnd($event, item.value.unitType)">
+                            <h2 [title]="item.value.unitType.name">{{item.value.unitType.name}}</h2>
+
+                            <div>
+                                <ul>
+                                    <li><label>Ind:</label><input type="number" class="index" formControlName="index" [ngClass]="{indexInput: item.get('index').errors}" [readonly]="responseFloorLayout.data.locked"></li>
+                                    <li><label>X:</label><input type="number" readonly min="0" max="1920" [value]="item.value.unitType.unitDetails.positionX" (change)="onPositionChange($event,item,'x')"></li>
+                                    <li><label>Y:</label><input type="number" readonly min="0" max="1080" [value]="item.value.unitType.unitDetails.positionY" (change)="onPositionChange($event,item,'y')"></li>
+                                </ul>
+                                <button *ngIf="!responseFloorLayout.data.locked" mat-icon-button color="warn" type="button" id="widgetCCAC{{i}}DelBtn" (click)=deleteUnitType(CCACUnitTypesFormArray,i)>
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <a mat-raised-button back i18n>Cancel</a>
+            <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid || responseFloorLayout.data.locked">
+                <span *ngIf="!floorLayoutId" i18n>Save</span>
+                <span *ngIf="floorLayoutId" i18n>Update</span>
+            </button>
+        </mat-card-actions>
+
+
+    </mat-card>
+</form>

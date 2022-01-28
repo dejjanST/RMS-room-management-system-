@@ -1,0 +1,87 @@
+<mat-card class="ved flex">
+    <mat-toolbar color="primary">
+        <mat-card-title>
+            <span i18n vedTitle>Building List</span>
+            <span i18n> for Site: </span>
+            <span *ngIf="globalService.site.data$ | async as site">{{ site.name }}</span>
+        </mat-card-title>
+    </mat-toolbar>
+
+    <mat-card-content>
+
+        <table mat-table [dataSource]="buildings.data" #mytable class="my-table mat-elevation-z8" *ngIf="buildings.data.length>0" class="buildingTable">
+            <!-- Building Name Column -->
+            <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef i18n> Name </th>
+                <td mat-cell *matCellDef="let element" id="{{ 'name-' + element.id }}">
+                    <span class="mobile-label" i18n>Name:</span>{{element.name}} </td>
+            </ng-container>
+
+            <!-- Building Desc Column -->
+            <ng-container matColumnDef="Description">
+                <th mat-header-cell *matHeaderCellDef i18n> Description </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Description:</span> {{element.desc}} </td>
+            </ng-container>
+
+            <!-- Building Id Column -->
+            <ng-container matColumnDef="Client ID">
+                <th mat-header-cell *matHeaderCellDef i18n> Client Id </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Client Id:</span>{{element.client_code}} </td>
+            </ng-container>
+
+
+            <!-- Building Country Column -->
+            <ng-container matColumnDef="Site ID">
+                <th mat-header-cell *matHeaderCellDef i18n> Site Id </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Site Id:</span> {{element.site_code}} </td>
+            </ng-container>
+
+            <!-- Site Country Column -->
+            <ng-container matColumnDef="Country">
+                <th mat-header-cell *matHeaderCellDef i18n> Country </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Country:</span>{{element.country}} </td>
+            </ng-container>
+
+            <!-- Site Country Column -->
+            <ng-container matColumnDef="City">
+                <th mat-header-cell *matHeaderCellDef i18n> City </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Status:</span>City{{element.city}} </td>
+            </ng-container>
+
+            <!-- Site Country Column -->
+            <ng-container matColumnDef="Address">
+                <th mat-header-cell *matHeaderCellDef i18n> Address </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Adress:</span>{{element.address}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Action">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let building" class="actions">
+                    <a [routerLink]="[ '/buildings', building.id, 'reports', 'verification']" stopPropagation mat-raised-button color="primary" id="{{ 'vr-' + building.id }}" i18n>Verification Report</a>
+                    <a [routerLink]="[ '/buildings', building.id, 'floors']" stopPropagation mat-raised-button color="primary" id="{{ 'fld-' + building.id }}" i18n>Floors</a>
+                    <a [routerLink]="[ '/buildings', building.id, 'units']" stopPropagation mat-raised-button color="primary" id="{{ 'unit-' + building.id }}" i18n>Units</a>
+                    <!-- <button i18n-title title="delete" mat-button (click)="openDialog(building)" stopPropagation mat-raised-button color="warn" id="{{ 'delBuilding-' + building.id }}" i18n>
+            <mat-icon>delete_forever</mat-icon>
+          </button> -->
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['Name','Description' ,'Client ID', 'Site ID', 'Action']"></tr>
+            <tr mat-row *matRowDef="let building; columns: ['Name', 'Description', 'Client ID', 'Site ID', 'Action'];" [routerLink]="['/sites', siteId, 'buildings', building.id]" id="{{ 'editBuilding-' + building.id }}">
+            </tr>
+        </table>
+
+        <p *ngIf="buildings.data.length===0" i18n>No Buildings found</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a mat-raised-button id="backBtn" back i18n>Back</a>
+        <a [routerLink]="['/sites', siteId, 'buildings', 'new']" mat-raised-button color="primary" id="addSite" i18n>Create Building</a>
+    </mat-card-actions>
+</mat-card>

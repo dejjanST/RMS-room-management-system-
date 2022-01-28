@@ -1,0 +1,19 @@
+#clientsList li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#clientsList .actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* th, .center{
+    text-align: center !important;
+  } */
+
+td,
+th {
+    vertical-align: middle;
+}

@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-header>
+        <mat-toolbar color="primary">
+            <mat-card-title i18n>
+                Enter Key
+            </mat-card-title>
+        </mat-toolbar>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+                <input type="text" placeholder="Enter a key or description" matInput [formControl]="key" [matAutocomplete]="autoDesc" class="keySearch">
+                <mat-autocomplete #autoDesc="matAutocomplete">
+                    <div *ngIf="key.value?.length >= 3">
+                        <mat-option *ngIf="filteredKeys.length==0" id="firstMatOption">
+                            <p id="noKeys">No keys found</p>
+                            <a mat-raised-button color="primary" [routerLink]="['/key/new', keyRoute]" class="addKeyButton">Add New Key</a>
+                        </mat-option>
+                        <mat-option *ngFor="let option of filteredKeys" [value]="option.description" (click)="edit(option)">
+                          {{ option.key_no }} - {{option.description}}
+                        </mat-option>
+                    </div>
+
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+
+
+    </mat-card-actions>
+</mat-card>

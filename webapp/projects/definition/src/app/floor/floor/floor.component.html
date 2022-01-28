@@ -1,0 +1,23 @@
+<mat-card id="floorDetails" class="ved flex">
+  <mat-toolbar color="primary">
+    <mat-card-title>
+      <span i18n *ngIf="floorId" vedTitle>Edit Floor</span>
+      <span i18n *ngIf="!floorId" vedTitle>Create Floor</span>
+      <span>: {{building.data.name}}</span>
+    </mat-card-title>
+  </mat-toolbar>
+
+  <mat-card-content class="mainContent">
+
+    <mat-tab-group>
+      <mat-tab label="Floor">
+        <app-create-floor [floorLayoutList]="floorLayoutList"></app-create-floor>
+      </mat-tab>
+
+      <mat-tab id="bulk" label="Bulk" *ngIf="!floorId">
+        <app-bulk-floor [floorLayoutList]="floorLayoutList"></app-bulk-floor>
+      </mat-tab>
+    </mat-tab-group>
+    
+  </mat-card-content>
+</mat-card>

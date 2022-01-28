@@ -1,0 +1,43 @@
+.master {
+    width: 425px;
+}
+
+.masterID {
+    text-align: center;
+}
+
+
+/* .masterID input {
+  border: 0;
+  padding: 20px 16px;
+  border-radius: 10px;
+  text-align: center;
+} */
+
+.mat-card-content {
+    display: flex !important;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mat-card-content button {
+    width: 80%;
+    margin: 10px auto;
+    height: 50px;
+}
+
+#QRcode {
+    margin-top: 18px;
+    color: gray !important;
+}
+
+.mat-card-actions button:first-child {
+    background-color: #bababa;
+}
+
+@media only screen and (max-width: 767px) {
+    .master {
+        width: 100%;
+        max-width: 425px;
+    }
+}

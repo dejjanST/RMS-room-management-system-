@@ -1,0 +1,99 @@
+<form [formGroup]="form">
+    <mat-card class="ved">
+        <mat-card-header>
+            <mat-toolbar color="primary">
+                <mat-card-title vedTitle i18n>Mailer Settings</mat-card-title>
+            </mat-toolbar>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <legend i18n>SMTP Details</legend>
+            <mat-form-field>
+                <mat-label i18n>Email Address</mat-label>
+                <input matInput formControlName="email" placeholder="pat@example.com" id="email">
+                <mat-error *ngIf="form.controls.email.hasError('email') && !form.controls.email.hasError('required')" i18n id="validEmail">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="form.controls.email.hasError('required')" id="requiredEmail" i18n>
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label i18n>Host name</mat-label>
+                <input matInput formControlName="hostName" placeholder="smtp.example.com" id="hostName">
+                <mat-error *ngIf="form.controls.hostName.hasError('required')" i18n id="hostNameRequired">
+                    Host name is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <mat-label i18n>Port</mat-label>
+                <input matInput type="number" formControlName="port" placeholder="587" id="port">
+                <mat-error *ngIf="form.controls.port.hasError('max') && !form.controls.port.hasError('required')" i18n id="portMax">
+                    Maximum port number is 65535
+                </mat-error>
+                <mat-error *ngIf="form.controls.port.hasError('required')" i18n id="portRequired">
+                    Port is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label i18n>Username</mat-label>
+                <input matInput formControlName="userName" placeholder="userName" id="userName">
+                <mat-error *ngIf="form.controls.userName.hasError('required')" i18n id="usernameRequired">
+                    Username is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label i18n>Password</mat-label>
+                <input matInput [type]="hidden ? 'password' : 'text'" formControlName="password" id="password">
+                <button type="button" [title]="hidden ? 'Show password' : 'Hide password'" mat-icon-button matSuffix (click)="hidden = !hidden">
+                    <mat-icon *ngIf="hidden">visibility</mat-icon>
+                    <mat-icon *ngIf="!hidden">visibility_off</mat-icon>
+
+                </button>
+                <mat-error *ngIf="form.controls.password.hasError('required')" i18n id="passRequired">
+                    Password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label i18n>Security protocol</mat-label>
+                <mat-select formControlName="protocol" id="protocolSelect">
+                    <mat-option id="opt1" value="none">None</mat-option>
+                    <mat-option id="opt2" value="start_tls">STARTTLS</mat-option>
+                    <mat-option id="opt3" value="ssl_tls">SSL/TLS</mat-option>
+                </mat-select>
+                <mat-error *ngIf="form.controls.protocol.hasError('required')" i18n id="protocolRequired">
+                    Security protocol is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+
+
+            <div id="mailTo">
+                <mat-form-field>
+                    <mat-label i18n>Mail To</mat-label>
+                    <input matInput [formControl]="mailTo" placeholder="pat@example.com">
+                    <mat-error *ngIf="mailTo.hasError('email') && !mailTo.hasError('required')" id="mailToValid" i18n>
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="mailTo.hasError('required')" i18n id="mailToRequired">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <button type="button" mat-raised-button [disabled]="form.invalid || mailTo.invalid" id="testBtn" (click)="testEmail()" i18n>TEST
+                    Mailer</button>
+            </div>
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button type="submit" mat-raised-button color="primary" [disabled]="!testSucces" (click)="submit()" i18n>SAVE</button>
+        </mat-card-actions>
+
+    </mat-card>
+</form>

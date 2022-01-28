@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+.mat-card-content,
+.mat-card-actions {
+    padding: 16px !important;
+}
+
+.login-card {
+    max-width: 500px;
+    margin: 50px auto !important;
+}
+
+.mat-card-header-text,
+.mat-card,
+.mat-card-header .mat-card-title,
+.mat-card-actions {
+    margin: 0;
+    padding: 0;
+}
+
+.mat-card mat-toolbar {
+    position: relative;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+}

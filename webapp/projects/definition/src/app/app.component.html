@@ -1,0 +1,57 @@
+<mat-drawer-container autosize id="mainApp">
+    <mat-drawer #drawer mode="side" id="sideBar" opened>
+        <div id="sideBarInner">
+            <ul>
+                <li (click)="changeFiller()">
+                    <a routerLink="clients" mat-menu-item>
+                        <mat-icon>people</mat-icon>
+                        <span *ngIf="showFiller" i18n>Clients List</span>
+                    </a>
+                </li>
+                <li (click)="changeFiller()">
+                    <a routerLink="sites" mat-menu-item>
+                        <mat-icon>dynamic_feed</mat-icon>
+                        <span *ngIf="showFiller" i18n>Sites List</span>
+                    </a>
+                </li>
+                <li (click)="changeFiller()">
+                    <a routerLink="units" mat-menu-item>
+                        <mat-icon>apps</mat-icon>
+                        <span *ngIf="showFiller" i18n>Unit Type List</span>
+                    </a>
+                </li>
+                <li (click)="changeFiller()">
+                    <a routerLink="units/new" mat-menu-item>
+                        <mat-icon>apps</mat-icon>
+                        <span *ngIf="showFiller" i18n>Unit Type Definition</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul id="menu2" [ngClass]="{flexColumn: !showFiller}">
+                <li>
+                    <languages></languages>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menuProfile" type="button">
+                        <mat-icon title="Profile settings" i18n="title">person</mat-icon>
+                    </button>
+                    <mat-menu #menuProfile="matMenu">
+                        <a href="#" mat-menu-item i18n>My Profile</a>
+                        <button mat-menu-item (click)="logout()" i18n>Logout</button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<loader id="loader"></loader>
+<button id="menuToggle" mat-button (click)="showFiller = !showFiller">
+    <mat-icon>menu</mat-icon>
+</button>

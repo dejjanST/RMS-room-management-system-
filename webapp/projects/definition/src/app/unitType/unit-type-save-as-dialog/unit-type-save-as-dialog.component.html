@@ -1,0 +1,17 @@
+<form>
+    <h1 mat-dialog-title i18n>Enter new Unit Type name</h1>
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label i18n>New Name</mat-label>
+            <input matInput type="text" [formControl]="nameFormControl">
+            <mat-error *ngIf="nameFormControl.invalid && (nameFormControl.dirty || nameFormControl.touched)">
+                <mat-error *ngIf="nameFormControl.errors.required" i18n>Name is required</mat-error>
+                <mat-error *ngIf="nameFormControl.errors.minlength" i18n>Enter at least 3 characters</mat-error>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button type="button" id="cancelBtn" mat-raised-button (click)="onNoClick()" i18n>Cancel</button>
+        <button type="submit" id="saveBtn" mat-raised-button color="primary" [mat-dialog-close]="nameFormControl.value" cdkFocusInitial [disabled]="nameFormControl.invalid" i18n>Save</button>
+    </div>
+</form>

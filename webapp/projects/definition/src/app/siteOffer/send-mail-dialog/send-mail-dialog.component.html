@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>
+    <span i18n>Send Offer to: </span>
+    <span> {{data.data.client_name}}</span>
+</h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label i18n>To:</mat-label>
+            <input type="email" matInput formControlName="email">
+            <mat-error *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+                <mat-error *ngIf="f.email.errors.required" id="emailToRequired" i18n>Email is required</mat-error>
+                <mat-error *ngIf="f.email.errors.email" id="emailToValidation" i18n>Email is invalid</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label i18n>Subject:</mat-label>
+            <input matInput formControlName="subject" id="subject">
+            <mat-error *ngIf="f.subject.invalid && (f.subject.dirty || f.subject.touched)">
+                <mat-error *ngIf="f.subject.errors.required" i18n>Subject is required</mat-error>
+                <mat-error *ngIf="f.subject.errors.minlength" id="subjectLengthValidation" i18n>Enter at least 3 characters</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label i18n>Message:</mat-label>
+            <textarea rows="10" matInput formControlName="message" id="message"></textarea>
+            <mat-error *ngIf="f.message.invalid && (f.message.dirty || f.message.touched)">
+                <mat-error *ngIf="f.message.errors.required" i18n>Message is required</mat-error>
+                <mat-error *ngIf="f.message.errors.minlength" id="messageLengthValidation" i18n>Enter at least 3 characters</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+    </div>
+    <div mat-dialog-actions>
+        <button type="button" mat-button (click)="onNoClick()" i18n>Cancel</button>
+        <button type="submit" id="btnSendOffer" mat-raised-button color="primary" [mat-dialog-close]="offerMail" [disabled]="form.invalid" i18n>Send</button>
+    </div>
+</form>

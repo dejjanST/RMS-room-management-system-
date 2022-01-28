@@ -1,0 +1,447 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~ngx-toastr/toastr';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    /* vertical-align: baseline; */
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    user-select: none;
+}
+
+.fRight {
+    float: right;
+}
+
+mat-card {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.ved.mat-card {
+    padding: 0;
+}
+
+.ved .mat-card-actions {
+    padding-bottom: 8px !important;
+    padding-right: 8px !important;
+}
+
+.mat-card-header-text,
+.mat-card,
+.mat-card-header .mat-card-title,
+.mat-card-actions {
+    margin: 0 !important;
+    /* padding: 0 !important; */
+}
+
+.action-link>a {
+    margin-right: 5px;
+}
+
+.mat-card-actions {
+    align-items: center;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.mat-card>.mat-card-actions:last-child {
+    padding: 8px !important;
+}
+
+.mat-card-header,
+.mat-card-actions {
+    flex: 0 1;
+}
+
+.mat-card-content {
+    overflow: auto;
+    padding: 16px;
+    flex: 1 0;
+}
+
+tr[ng-reflect-router-link],
+.mat-row {
+    cursor: pointer;
+}
+
+.mat-row:hover {
+    background-color: lightgray;
+}
+
+app-toolbar {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    width: 100%;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-toolbar ul {
+    display: flex;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+    height: 40px !important;
+}
+
+.mat-card-title {
+    margin-bottom: 0 !important;
+}
+
+mat-error {
+    font-size: 12px;
+    text-align: right;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.mat-drawer-content {
+    /* padding: 20px; */
+    height: auto !important;
+    width: 100%;
+}
+
+#mainApp {
+    position: fixed;
+    width: 100%;
+    overflow: auto;
+    height: 100vh;
+    display: flex;
+}
+
+#sideBar {
+    /* width: 200px; */
+}
+
+#sideBarInner {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 45px);
+}
+
+#menu2 {
+    display: flex;
+    justify-content: center;
+}
+
+mat-sidenav-container {
+    position: absolute !important;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.scrollbox {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: auto;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.mat-drawer-container {
+    display: flex !important;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    vertical-align: middle;
+}
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-accepted,
+.mat-raised-button.mat-accept {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.dropzone input {
+    cursor: pointer !important;
+}
+
+mat-sidenav-content {
+    display: flex !important;
+}
+
+mat-sidenav-content>* {
+    display: flex;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    ;
+}
+
+form.flex,
+.flex {
+    height: 100%;
+    display: flex;
+}
+
+router-outlet {
+    display: none;
+}
+
+loader {
+    position: absolute;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+}
+
+.fieldGroup {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fieldGroup>* {
+    margin-right: 16px;
+}
+
+legend {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+legend:not(:first-child) {
+    padding-top: 10px;
+}
+
+td.actions {
+    text-align: right;
+}
+
+td.actions>* {
+    margin-right: 10px;
+}
+
+.mat-tab-body-wrapper {
+    flex: 1;
+}
+
+.p0 {
+    padding: 0 !important;
+}
+
+td.mat-cell,
+th.mat-header-cell {
+    padding: 0 5px !important;
+}
+
+#toast-container small {
+    display: block;
+    font-size: 10pt;
+}
+
+.mobile-label {
+    display: none;
+}
+
+@media(max-width: 767px) {
+    .mobile-label {
+        width: 33%;
+        display: inline-block;
+        font-weight: bold;
+    }
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 1);
+    margin: 0 2px;
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+    }
+    #sideBar,
+    #menuToggle,
+    .mat-card-actions,
+    .mobile-label,
+    .toast-container {
+        display: none !important;
+    }
+    mat-drawer-content {
+        margin: 0 !important;
+    }
+    .mat-drawer-container,
+    .mat-drawer-content,
+    .mat-card-content,
+    body {
+        display: block !important;
+        height: auto !important;
+    }
+    #mainApp {
+        position: relative;
+    }
+    table {
+        page-break-inside: auto
+    }
+    tr {
+        page-break-inside: avoid;
+        page-break-before: auto
+    }
+    thead {
+        display: table-header-group
+    }
+}

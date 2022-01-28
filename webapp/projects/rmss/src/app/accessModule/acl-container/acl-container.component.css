@@ -1,0 +1,8 @@
+mat-card-content {
+    display: flex;
+}
+
+.vertical {
+    flex-direction: column;
+    width: 400px;
+}

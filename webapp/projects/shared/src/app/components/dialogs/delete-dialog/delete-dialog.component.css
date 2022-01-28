@@ -1,0 +1,25 @@
+.mat-form-field {
+  width: 30%;
+}
+
+.flex {
+  display: flex;
+  align-items: baseline;
+}
+
+.flex p {
+  margin-right: 20px;
+}
+
+.flex span {
+  font-weight: bold;
+}
+
+mat-dialog-content {
+  overflow: hidden;
+}
+
+mat-dialog-actions {
+  margin-top: 5px;  
+  margin-bottom: 0px;
+}

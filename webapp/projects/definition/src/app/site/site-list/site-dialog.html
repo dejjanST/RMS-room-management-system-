@@ -1,0 +1,9 @@
+<h2 mat-dialog-title><span i18n>Delete</span> {{data.site.name}} ?</h2>
+<div mat-dialog-content>
+  <p i18n>Are you sure you want to delete this site ?</p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="basic" (click)="onNoClick()" id="closeSiteButtDialog" i18n>Close</button>
+  <button mat-raised-button color="warn" [mat-dialog-close]="data.site.id" cdkFocusInitial id="delSiteDialog" i18n>Delete</button>
+</div>

@@ -1,0 +1,69 @@
+<form (ngSubmit)="createBulk()" [formGroup]="formBulk" id="bulkFloorForm" class="flex">
+  <mat-card-content class="createCardContent">
+
+    <div class="form">
+      <mat-form-field class="full-width">
+        <mat-label i18n>Choose a Floor Layout</mat-label>
+        <mat-select formControlName="floorLayout" name="floorLayout" class="floorBulkLayout" (selectionChange)="floorSelected($event)">
+          <mat-option *ngFor="let floorLayout of floorLayoutList.data" id="{{ 'bulkOption-' + floorLayout.id }}" [value]=floorLayout.id>
+            {{ floorLayout.name }}</mat-option>
+        </mat-select>
+
+        <mat-error *ngIf="formBulk.controls.floorLayout.invalid && (formBulk.controls.floorLayout.dirty || formBulk.controls.floorLayout.touched)"
+          class="alert" align="end" id="error-floorLayout">
+          <mat-error *ngIf="formBulk.controls.floorLayout.errors.required" id="validateBulkFloorLayRequired" i18n>Floor Layout is required</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label i18n>Prefix</mat-label>
+        <input matInput formControlName="prefix" name="prefix" class="prefix">
+        <mat-error *ngIf="formBulk.controls.prefix.invalid && (formBulk.controls.prefix.dirty || formBulk.controls.prefix.touched)"
+          class="alert" align="end" id="error-prefix">
+          <mat-error *ngIf="formBulk.controls.prefix.errors.required" id="prefixRequired" i18n>This field is required</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <div id="fromFloorTo">
+        <mat-form-field class="full-width">
+          <mat-label i18n>From Floor</mat-label>
+          <input matInput formControlName="fromNumber" name="fromNumber" class="fromNumber">
+          <mat-error *ngIf="formBulk.controls.fromNumber.invalid && (formBulk.controls.fromNumber.dirty || formBulk.controls.fromNumber.touched)"
+            class="alert" align="end" id="error-fromNumber">
+            <mat-error *ngIf="formBulk.controls.fromNumber.errors.required" id="fromNumberRequired" i18n>This field is required</mat-error>
+            <mat-error *ngIf="formBulk.controls.fromNumber.errors.pattern" id="fromNumber" i18n>This must be number</mat-error>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label i18n>To Floor</mat-label>
+          <input matInput formControlName="toNumber" name="toNumber" class="toNumber">
+          <mat-error *ngIf="formBulk.controls.toNumber.invalid && (formBulk.controls.toNumber.dirty || formBulk.controls.toNumber.touched)"
+            class="alert" align="end" id="error-toNumber">
+            <mat-error *ngIf="formBulk.controls.toNumber.errors.required" id="toNumberRequired" i18n>This field is required</mat-error>
+            <mat-error *ngIf="formBulk.controls.toNumber.errors.pattern" id="toNumber" i18n>This must be number</mat-error>
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="floorImg" formArrayName="units">
+      <img mat-card-image class="floorLayoutImg" src="{{ floorImage$ | async }}" />
+      <ul class="units">
+        <li *ngFor="let item of bulkUnitsFormArray.controls; let i=index" [formGroupName]="i"
+          [ngStyle]="{'left': item.value.pos.x+'px', 'top': item.value.pos.y+'px'}">
+          <p>{{ item.value.unit_type_name }}</p>
+          <mat-form-field class="unitName">
+            <mat-label i18n>Name</mat-label>
+            <input type="text" matInput readonly formControlName="name" name="name" class="name">
+          </mat-form-field>
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions align="end">
+    <a mat-raised-button  i18n>Cancel</a>
+    <button type="submit" id='bulkSubmit' mat-raised-button color="primary" [disabled]="!formBulk.valid" i18n>Add</button>
+  </mat-card-actions>
+</form>

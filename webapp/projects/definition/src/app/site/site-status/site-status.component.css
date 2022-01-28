@@ -1,0 +1,16 @@
+.online {
+    color: green;
+}
+
+.offline {
+    color: red;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+}
+
+#container>* {
+    margin-right: 10px;
+}

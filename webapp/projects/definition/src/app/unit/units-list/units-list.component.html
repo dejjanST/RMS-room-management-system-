@@ -1,0 +1,148 @@
+<mat-card class="ved flex">
+  <mat-toolbar color="primary">
+    <mat-card-title class="unitListTitle">
+      <span i18n vedTitle>Unit List</span>
+      <span i18n> for Building: </span>
+      <span *ngIf="globalService.building.data$ | async as b">{{ b.name }}</span>
+    </mat-card-title>
+  </mat-toolbar>
+
+  <mat-card-content>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title i18n>
+            Filters
+          </mat-panel-title>
+          <mat-panel-description>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        
+        <form [formGroup]="formGroup">
+          <div class="filters">
+            <mat-form-field class="example-full-width">
+              <mat-label i18n>Filter by Unit Name</mat-label>
+              <input matInput formControlName="unit_name" id="uName" class="uName">
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+              <mat-label i18n>Filter by Unit Number</mat-label>
+              <input matInput formControlName="unit_number" id="uNumber" class="uNumber">
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+              <mat-label i18n>Filter by Floor Name</mat-label>
+              <input matInput formControlName="floor_name" id="fName" class="fName">
+            </mat-form-field>
+
+        
+            <mat-form-field class="example-full-width">
+              <mat-label i18n>Filter by Floor Number</mat-label>
+              <input matInput formControlName="floor_number" id="fNumber" class="fNumber">
+            </mat-form-field>
+
+          
+            <mat-form-field>
+              <mat-label i18n>Choose a State</mat-label>
+              <mat-select formControlName="stage" id="stage" class="unitStage">
+                <mat-option value="" i18n>Any</mat-option>
+                <mat-option [value]="1" i18n>Non Commissioned</mat-option>
+                <mat-option [value]="2" i18n>Assocation</mat-option>
+                <mat-option [value]="3" i18n>Verification</mat-option>
+                <mat-option [value]="4" i18n>Malfunction</mat-option>
+                <mat-option [value]="5" i18n>Verified</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            
+            <mat-form-field>
+              <mat-label i18n>Choose a Master Controller</mat-label>
+              <mat-select formControlName="model" id="model" class="typeMasterController">
+                <mat-option i18n value="">Any</mat-option>
+                <mat-option [value]="option.model" id="mcOption{{option.id}}" *ngFor="let option of equipmentList | byKeyValue:'category':'MC'">
+                  {{ option.description }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+        </form>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+
+
+
+    <table mat-table [dataSource]="units.data" #mytable class="unitTable">
+      <!-- Unit Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef i18n> Name </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="mobile-label" i18n>Name:</span>{{element.u_name}}</td>
+      </ng-container>
+
+      <!-- Unit Number Column -->
+      <ng-container matColumnDef="Unit No">
+        <th mat-header-cell *matHeaderCellDef i18n> Unit No </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="mobile-label" i18n>Unit No:</span>{{element.u_number}}</td>
+      </ng-container>
+
+      <!-- Floor Name Column -->
+      <ng-container matColumnDef="floorName">
+        <th mat-header-cell *matHeaderCellDef i18n> Floor Name </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="mobile-label" i18n>Floor Name:</span>{{element.f_name}}</td>
+      </ng-container>
+
+      <!-- Floor Num Column -->
+      <ng-container matColumnDef="flNo">
+        <th mat-header-cell *matHeaderCellDef i18n> Floor No </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="mobile-label" i18n>Floor No:</span>{{element.f_number}}</td>
+      </ng-container>
+
+      <!-- Unit Stage Column -->
+      <ng-container matColumnDef="unitStage">
+        <th mat-header-cell *matHeaderCellDef i18n> State </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="mobile-label" i18n>State:</span>{{ getStage(element.unit_stage) }}</td>
+      </ng-container>
+
+      <!-- Unit MC Column -->
+      <ng-container matColumnDef="Master Controller">
+        <th mat-header-cell *matHeaderCellDef i18n> Master Controller </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="mobile-label" i18n>State:</span>{{ element.model }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element" class="actions">
+          <a [routerLink]="['/units', element.unit_id, 'master']" stopPropagation mat-raised-button color="primary"
+            id="{{ 'sites-' + element.id }}" i18n>Commissioning</a>
+          <a [routerLink]="['/units', element.unit_id, 'verification']" stopPropagation mat-raised-button
+            color="primary" id="{{ 'sites-' + element.id }}" i18n>Verification</a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row
+        *matHeaderRowDef="['name','Unit No', 'floorName', 'flNo', 'unitStage', 'Master Controller', 'Action']"></tr>
+      <tr mat-row
+        *matRowDef="let element; columns: ['name', 'Unit No', 'floorName', 'flNo', 'unitStage', 'Master Controller', 'Action'];">
+      </tr>
+    </table>
+
+    <mat-paginator [length]="units.meta.total" [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons
+      (page)="pageEvent($event)"></mat-paginator>
+
+    <p class="nUnitsFound" *ngIf="units.data.length===0" i18n>No Units found</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <a mat-raised-button back i18n>Back</a>
+  </mat-card-actions>
+</mat-card>

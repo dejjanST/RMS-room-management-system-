@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+    <mat-expansion-panel #mep>
+        <mat-expansion-panel-header [title]="equipment.description">
+            <mat-panel-title>
+                <mat-icon *ngIf="equipment.status==1" class="noActionTaken">radio_button_unchecked</mat-icon>
+                <mat-icon *ngIf="equipment.status==2" class="working">check_circle_outline</mat-icon>
+                <mat-icon *ngIf="equipment.status>=3" class="notWorking">highlight_off</mat-icon>
+                <span>
+                    <strong>{{equipment.model}}</strong>
+                </span>
+            </mat-panel-title>
+            <mat-icon></mat-icon>
+        </mat-expansion-panel-header>
+
+        <div id="content">
+            <div id="radioBtns">
+                <div class="radio">
+                    <label i18n>Select an option</label>
+                    <mat-radio-group formControlName="setStatus">
+                        <mat-radio-button [value]="1" i18n>No action taken </mat-radio-button>
+                        <mat-radio-button [value]="2" i18n>Working</mat-radio-button>
+                        <mat-radio-button [value]="3" [checked]="form.get('setStatus').value>=3" i18n>Not working
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+
+                <div class="radio" *ngIf="form.get('setStatus').value>=3">
+                    <label i18n>Choose a reason</label>
+                    <mat-radio-group formControlName="setStatus">
+                        <mat-radio-button [value]="3" i18n>Wiring</mat-radio-button>
+                        <mat-radio-button [value]="4" i18n>Equipment</mat-radio-button>
+                        <mat-radio-button [value]="5" i18n>Controller</mat-radio-button>
+                        <mat-radio-button [value]="6" i18n>Other</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+            </div>
+
+
+            <mat-form-field id="note">
+                <mat-label i18n>Note</mat-label>
+                <textarea formControlName="note" matInput rows="6"></textarea>
+            </mat-form-field>
+
+        </div>
+        <mat-action-row>
+            <button type="button" mat-raised-button color="primary" (click)="save()">Save</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</form>

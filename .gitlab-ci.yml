@@ -1,0 +1,47 @@
+stages:
+    - build
+    - test
+    - staging
+
+before_script:
+    - docker info
+
+build:
+    stage: build
+    script:
+        - docker build --force-rm -t $CI_PROJECT_NAME --build-arg user=$USER --build-arg uid=`id -u $USER` --build-arg gid=`id -g $GROUP` -f docker/Dockerfile .
+    only:
+        - develop
+        - staging
+        - master
+    tags:
+        - deb_node_x64
+
+test_webapp:
+    stage: test
+    script:
+        - docker run --rm -v /tmp:/tmp -v "$(pwd)":/project --mount source=rms-web_deps,target=/project/webapp/node_modules $CI_PROJECT_NAME sh scripts/docker_test.sh
+    only:
+        - develop
+        - staging
+        - master
+    tags:
+        - deb_node_x64
+
+rms-staging:
+    stage: staging
+    script:
+        - docker run --rm -v /tmp/:/tmp/ -v "$(pwd)":/project --mount source=rms-web_deps,target=/project/webapp/node_modules $CI_PROJECT_NAME sh scripts/docker_build.sh
+        - scripts/deploy_webapp.sh
+    when: on_success
+    tags:
+        - deb_node_x64
+    only:
+        - staging
+    environment:
+        name: rms-staging
+        url: https://rms.ved.mk/
+
+after_script:
+    - docker rmi $(docker images -f "dangling=true" -q)
+    - docker volume ls -qf dangling=true | xargs -r docker volume rm

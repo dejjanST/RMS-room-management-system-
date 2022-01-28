@@ -1,0 +1,50 @@
+<form [formGroup]="form" (ngSubmit)="save()" id="buildingForm" class="flex">
+    <mat-card id="building" class="ved">
+        <mat-toolbar color="primary">
+            <mat-card-title>
+                <span i18n *ngIf="buildingId" vedTitle>Edit Building</span>
+                <span i18n *ngIf="!buildingId" vedTitle>Create Building</span>
+                <span i18n> for Site: </span>
+                <span *ngIf="globalService.site.data$ | async as site">{{site.name}} </span>
+            </mat-card-title>
+        </mat-toolbar>
+
+        <mat-card-content>
+            <div id="inputForm">
+                <div class="dropzone" dnd (fileDropped)="fileBrowseHandler($event)">
+                    <input type="file" id="image" accept="image/*" #fileDropRef (change)="fileBrowseHandler($event)" />
+                    <img src="assets/ic-upload-file.svg" />
+                    <p i18n>Drag and drop file here</p>
+                    <p i18n>or</p>
+                    <label for="image" i18n>Browse for file</label>
+                </div>
+
+                <mat-form-field class="full-width">
+                    <mat-label i18n>Name</mat-label>
+                    <input matInput formControlName="name" name="name" class="name">
+                    <mat-error *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="alert" align="end" id="error-siteName">
+                        <mat-error *ngIf="f.name.errors.required" id="siteNameRequired" i18n>Name is required
+                        </mat-error>
+                        <mat-error *ngIf="f.name.errors.minlength" id="siteNameLength" i18n>Name must be at least 2 characters long</mat-error>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label i18n>Description</mat-label>
+                    <input matInput formControlName="desc" name="desc" class="desc">
+                </mat-form-field>
+            </div>
+
+            <img *ngIf="building.data.file_id" [src]="floorImgUrl$ | async" alt="" srcset="" id="buildingImage">
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <a mat-raised-button back i18n>Cancel</a>
+            <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">
+                <span *ngIf="!buildingId" i18n>Save</span>
+                <span *ngIf="buildingId" i18n>Update</span>
+            </button>
+        </mat-card-actions>
+
+    </mat-card>
+</form>

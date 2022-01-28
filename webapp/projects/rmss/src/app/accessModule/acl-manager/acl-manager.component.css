@@ -1,0 +1,32 @@
+#actionContainer {
+    display: flex;
+    align-items: center;
+}
+
+#actionContainer>* {
+    margin: 0 3px;
+}
+
+mat-card {
+    width: 750px;
+}
+
+#actionContainer>button {
+    margin-bottom: 1.34375em
+}
+
+.grant {
+    background-color: rgba(40, 167, 69, 0.2);
+}
+
+.deny {
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+.grantBtn {
+    background-color: rgba(40, 167, 69);
+}
+
+.denyBtn {
+    background-color: rgba(220, 53, 69);
+}

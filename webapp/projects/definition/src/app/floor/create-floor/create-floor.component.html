@@ -1,0 +1,59 @@
+<form [formGroup]="form" (ngSubmit)="save()" id="createFloorForm" class="flex">
+  <mat-card-content class="createCardContent">
+
+    <div class="form">
+      <mat-form-field class="full-width">
+        <mat-label i18n>Choose a Floor Layout</mat-label>
+        <mat-select formControlName="floorLayout" name="floorLayout" id="floorCreateLayout" (selectionChange)="floorSelected($event)" id="floorCreateLayout">
+          <mat-option *ngFor="let floorLayout of floorLayoutList.data" id="{{ 'option-' + floorLayout.id }}" [value]=floorLayout.id>
+            {{ floorLayout.name }}</mat-option>
+        </mat-select>
+
+        <mat-error *ngIf="f.floorLayout.invalid && (f.floorLayout.dirty || f.floorLayout.touched)" class="alert" align="end" id="error-floorLayout">
+          <mat-error *ngIf="f.floorLayout.errors.required" id="validateFloorLayoutRequired" i18n>Floor Layout is required</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label i18n>Floor Name</mat-label>
+        <input matInput formControlName="floorName" name="floorName" class="floorName">
+        <mat-error *ngIf="f.floorName.invalid && (f.floorName.dirty || f.floorName.touched)" class="alert" align="end" id="error-floorName">
+          <mat-error *ngIf="f.floorName.errors.required" id="validateFloorNameRequired" i18n>Floor Name is required</mat-error>
+          <mat-error *ngIf="f.floorName.errors.minlength" id="validateFloorNameLength" i18n>Floor Name must be at least 2 characters long</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label i18n>Floor Number</mat-label>
+        <input matInput formControlName="floorNumber" name="floorNumber" class="floorNumber">
+        <mat-error *ngIf="f.floorNumber.invalid && (f.floorNumber.dirty || f.floorNumber.touched)" class="alert" align="end" id="error-floorNumber">
+          <mat-error *ngIf="f.floorNumber.errors.required" id="validateFloorNumRequired" i18n>Floor Number is required</mat-error>
+          <mat-error *ngIf="f.floorNumber.errors.pattern" id="validateFloorNumberNumeric" i18n>Floor Number must be numeric</mat-error>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div class="floorImg" formArrayName="units">
+      <img mat-card-image class="floorLayoutImg" src="{{ floorImage$ | async }}" />
+      <ul class="units">
+        <li *ngFor="let item of unitsFormArray.controls; let i=index" [formGroupName]="i"
+          [ngStyle]="{'left': item.value.pos.x+'px', 'top': item.value.pos.y+'px'}">
+          <p>{{ item.value.unit_type_name }}</p>
+          <mat-form-field class="unitName">
+            <mat-label i18n>Name</mat-label>
+            <input type="text" matInput formControlName="name" name="name" class="name">
+          </mat-form-field>
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+  
+  <mat-card-actions align="end">
+    <a mat-raised-button back i18n>Cancel</a>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">
+      <span *ngIf="!floorId" i18n>Save</span>
+      <span *ngIf="floorId" i18n>Update</span>
+    </button>
+  </mat-card-actions>
+</form>

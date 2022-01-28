@@ -1,0 +1,39 @@
+<mat-card class="master ved flex">
+
+    <mat-toolbar color="primary">
+        <mat-card-title>Set Controllers</mat-card-title>
+    </mat-toolbar>
+
+    <mat-card-content class="p0">
+
+        <mat-accordion class="example-headers-align">
+            <mat-expansion-panel *ngFor="let controller of showControllers; index as position;">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon *ngIf="!controller.isAssociated" class="notAssociated {{'noActionTaken-' +position}}">
+                            radio_button_unchecked
+                        </mat-icon>
+                        <mat-icon *ngIf="controller.isAssociated" class="associated">check_circle_outline</mat-icon>
+                        <span>
+                            <strong>{{controller.description}} </strong>
+                        </span>
+                    </mat-panel-title>
+                    <mat-icon></mat-icon>
+                </mat-expansion-panel-header>
+
+
+                <app-form-controller [controller]="controller" [position]="position" [siteId]="siteId" [unitId]="unitId" (succEvent)="loadData()">
+                </app-form-controller>
+
+            </mat-expansion-panel>
+
+        </mat-accordion>
+
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a mat-raised-button [routerLink]="['../master']" routerLinkActive="router-link-active" i18n>Back</a>
+        <a mat-raised-button color="primary" [routerLink]="['/buildings',buildingId,'units']" i18n>Finish</a>
+    </mat-card-actions>
+</mat-card>

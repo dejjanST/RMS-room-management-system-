@@ -1,0 +1,64 @@
+<mat-drawer-container autosize id="mainApp">
+    <mat-drawer #drawer mode="side" id="sideBar" opened>
+        <div id="sideBarInner">
+            <ul>
+                <li (click)="changeFiller()">
+                    <a routerLink="acl" mat-menu-item>
+                        <mat-icon>people</mat-icon>
+                        <span *ngIf="showFiller" i18n>ACL</span>
+
+                    </a>
+                </li>
+                <li (click)="changeFiller()">
+                    <a routerLink="groups" mat-menu-item>
+                        <mat-icon>people</mat-icon>
+                        <span *ngIf="showFiller" i18n>Groups</span>
+
+                    </a>
+                </li>
+                <li (click)="changeFiller()">
+                    <a routerLink="keys" mat-menu-item>
+                        <mat-icon>vpn_key</mat-icon>
+                        <span *ngIf="showFiller" i18n>Keys</span>
+
+                    </a>
+                </li>
+                <li (click)="changeFiller()">
+                    <a routerLink="mailer_settings" mat-menu-item>
+                        <mat-icon>email</mat-icon>
+                        <span *ngIf="showFiller" i18n>Mailer Settings</span>
+
+                    </a>
+                </li>
+            </ul>
+
+            <ul id="menu2" [ngClass]="{flexColumn: !showFiller}">
+                <li>
+                    <languages></languages>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menuProfile" type="button">
+                        <mat-icon title="Profile settings" i18n="title">person</mat-icon>
+                    </button>
+                    <mat-menu #menuProfile="matMenu">
+                        <a href="#" mat-menu-item i18n>My Profile</a>
+                        <button mat-menu-item (click)="logout()" i18n>Logout</button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+        <p *ngIf="siteName" id="siteName"><span>Site Name:</span> {{siteName}}</p>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+<loader id="loader"></loader>
+
+<button id="menuToggle" mat-button (click)="showFiller = !showFiller">
+    <mat-icon>menu</mat-icon>
+</button>

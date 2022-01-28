@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>
+    <mat-card-title>
+        <span i18n vedTitle>Invite Site Manager</span>
+        <span i18n> for: </span>
+        <span>{{data.name}}</span>
+    </mat-card-title>
+</h2>
+
+<form [formGroup]="form" (ngSubmit)="invite()" class="managerForm">
+    <mat-dialog-content class="mat-typography">
+        <mat-form-field class="full-width">
+            <mat-label i18n>Name</mat-label>
+            <input cdkFocusInitial matInput formControlName="name" name="name" class="managerName">
+            <mat-error *ngIf="form.controls.name.invalid && (form.controls.name.dirty || form.controls.name.touched)" class="alert" align="end" id="error-name">
+                <mat-error *ngIf="form.controls.name.errors.required" id="validateNameRequired" i18n>Name is required
+                </mat-error>
+                <mat-error *ngIf="form.controls.name.errors.minlength" id="validateNameLength" i18n>Name must be at least 3 characters long</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="full-width">
+            <mat-label i18n>Surname</mat-label>
+            <input matInput formControlName="surname" name="surname" class="managerSurname">
+            <mat-error *ngIf="form.controls.surname.invalid && (form.controls.surname.dirty || form.controls.surname.touched)" class="alert" align="end" id="error-surname">
+                <mat-error *ngIf="form.controls.surname.errors.required" id="validateSurnameRequired" i18n>Surname is required
+                </mat-error>
+                <mat-error *ngIf="form.controls.surname.errors.minlength" id="validateSurnameLength" i18n>Surname must be at least 3 characters long</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label i18n>Email</mat-label>
+            <input matInput formControlName="email" type="email" name="email" class="userEmail">
+            <mat-error *ngIf="form.controls.email.invalid && (form.controls.email.dirty || form.controls.email.touched)" class="alert" align="end" id="error-email">
+                <mat-error *ngIf="form.controls.email.errors.required" id="validateEmailRequired" i18n>Email Address is required
+                </mat-error>
+                <mat-error *ngIf="form.controls.email.errors.email" id="validateEmailProper" i18n>Enter Proper Email Address
+                </mat-error>
+            </mat-error>
+        </mat-form-field>
+
+    </mat-dialog-content>
+
+    <mat-dialog-actions align="end">
+        <button type="button" mat-button mat-dialog-close i18n>Cancel</button>
+        <button type="submit" class='submitButton' mat-raised-button color="primary" [disabled]="!form.valid" i18n>Create</button>
+    </mat-dialog-actions>
+</form>

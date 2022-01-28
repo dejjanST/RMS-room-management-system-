@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <h1 i18n>Application title</h1>
+    <ul>
+        <li>
+            <languages></languages>
+        </li>
+        <li>
+            <button mat-button [matMenuTriggerFor]="menuProfile" type="button"><mat-icon title="Profile settings" i18n="title">person</mat-icon></button>
+            <mat-menu #menuProfile="matMenu">
+                <a href="#" mat-menu-item i18n>My Profile</a>
+                <button mat-menu-item (click)="logout()" i18n>Logout</button>
+            </mat-menu>
+        </li>
+    </ul>
+
+</mat-toolbar>

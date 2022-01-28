@@ -1,0 +1,24 @@
+<mat-card class="ved">
+    <mat-card-header>
+        <mat-toolbar>
+            <mat-card-title i18n>Groups</mat-card-title>
+        </mat-toolbar>
+    </mat-card-header>
+    <mat-card-content>
+
+        <mat-form-field id="groupsField">
+            <mat-chip-list #chipList>
+                <mat-chip *ngFor="let group of selectedGroups" [removable]="true" [style.background-color]="group.color" (removed)="remove(group)">
+                    {{group.name}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input #groupInput [formControl]="groupFilter" [matAutocomplete]="auto" [matChipInputFor]="chipList">
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let group of (originalGroups | exclude:'id':selectedGroups | filterByString:'name':groupFilter.value)" [value]="group">
+                    {{group.name}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </mat-card-content>
+</mat-card>

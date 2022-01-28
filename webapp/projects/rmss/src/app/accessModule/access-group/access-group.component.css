@@ -1,0 +1,20 @@
+#groupName {
+    width: 300px;
+}
+
+.square {
+    border: 1px solid black;
+    height: 24px;
+    width: 24px;
+    margin: 5px;
+}
+
+#groupColor {
+    display: flex;
+    align-items: center;
+}
+
+#inputContainer {
+    display: flex;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,186 @@
+<div id="siteOffer" class="flex">
+    <form [formGroup]="form" (ngSubmit)="submit()" id="createOffer">
+        <mat-card class="ved">
+            <mat-toolbar color="primary">
+                <mat-card-title>
+                    <span *ngIf="!offerId" i18n vedTitle>Create Site Offer</span>
+                    <span *ngIf="offerId" i18n vedTitle>Edit Site Offer </span>
+                    <span *ngIf="responseSiteOffer">{{ responseSiteOffer.data.name }}</span>
+                    <span i18n> for </span>
+                    <span *ngIf="site">{{site.name}}</span>
+                </mat-card-title>
+                <mat-chip-list>
+                    <mat-chip *ngIf="responseSiteOffer.data.status===1" i18n>Open</mat-chip>
+                    <mat-chip color="accent" selected *ngIf="responseSiteOffer.data.status===2" i18n>Sent</mat-chip>
+                    <mat-chip color="accepted" selected *ngIf="responseSiteOffer.data.status===3" i18n>Accepted</mat-chip>
+                    <mat-chip color="warn" selected *ngIf="responseSiteOffer.data.status===4" i18n>Declined</mat-chip>
+                </mat-chip-list>
+            </mat-toolbar>
+
+
+            <mat-card-content>
+
+                <mat-accordion multi>
+                    <mat-expansion-panel [expanded]="true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title i18n>
+                                General Data
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+                        <div id="generalData">
+                            <mat-form-field>
+                                <mat-label i18n>Name</mat-label>
+                                <input matInput type="text" [readonly]="responseSiteOffer.data.status>1" formControlName="name" id="siteOfferName">
+                                <mat-error *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)">
+                                    <mat-error *ngIf="f.name.errors.required"><span i18n>Name is </span><strong>required</strong></mat-error>
+                                    <mat-error *ngIf="f.name.errors.minlength" i18n>Name must be 3 characters long</mat-error>
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <mat-label i18n>Number of Buildings</mat-label>
+                                <input matInput type="number" [readonly]="responseSiteOffer.data.status>1" formControlName="numberOfBuildings" id="numberOfBuildings">
+                                <mat-error *ngIf="f.numberOfBuildings.hasError('required')"><span i18n>Number is</span> <strong>required</strong></mat-error>
+                                <mat-error *ngIf="f.numberOfBuildings.hasError('min')" i18n>Number of buildings must be >= 0</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <mat-label i18n>Number of Receptions</mat-label>
+                                <input matInput type="number" [readonly]="responseSiteOffer.data.status>1" formControlName="numberOfReceptions" id="numberOfReceptions">
+                                <mat-error *ngIf="f.numberOfReceptions.hasError('required')"><span i18n>Number is</span> <strong>required</strong></mat-error>
+                                <mat-error *ngIf="f.numberOfReceptions.hasError('min')" i18n>Number of receptions must be >= 0</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                    </mat-expansion-panel>
+
+
+                    <mat-expansion-panel [expanded]="true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title i18n>
+                                Unit Type
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+
+                        <div cdkDropListGroup>
+                            <div class="example-container">
+                                <h2 i18n>Available Unit Types</h2>
+
+                                <ul cdkDropList [cdkDropListData]="availableUnitTypes" class="example-list" cdkDropListSortingDisabled (cdkDropListDropped)="dropUT($event)">
+                                    <li id="{{ 'unitType-' + item.id }}" class="example-box" *ngFor="let item of availableUnitTypes; let i = index" data-value="{{ i }}" cdkDrag [cdkDragDisabled]="responseSiteOffer.data.status>1">{{item.name}}
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="example-container">
+                                <h2 i18n>Selected Unit Types</h2>
+
+                                <ul cdkDropList [cdkDropListData]="selectedUt" class="example-list" (cdkDropListDropped)="dropUT($event)" formArrayName="unitTypes">
+                                    <li class="example-box">
+                                        <p><strong i18n>Drag & Drop</strong> <span i18n>items here from Available Unit Types list.</span> </p>
+                                    </li>
+                                    <li class="example-box selectedUT" *ngFor="let item of unitTypeFormArray.controls; let i = index" [formGroupName]="i">
+                                        <mat-form-field>
+                                            <mat-label i18n>Quantity</mat-label>
+                                            <input matInput type="number" [readonly]="responseSiteOffer.data.status>1" formControlName="qty" id="qty{{item.value.utdId}}">
+                                            <!-- <mat-error *ngIf="item.get('qty').hasError('required')" i18n>
+                                                    Number is <strong>required</strong>
+                                                </mat-error>
+                                                <mat-error *ngIf="item.get('qty').hasError('min')" i18n>
+                                                    Value must be greater than 0
+                                                </mat-error> -->
+                                        </mat-form-field>
+                                        <span>{{item.value.utdName}}</span>
+                                        <button *ngIf="responseSiteOffer.data.status == 1 || responseSiteOffer.data.status == undefined" mat-icon-button color="warn" type="button" (click)=removeUnitType(i)>
+                                            <mat-icon>delete</mat-icon>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </mat-expansion-panel>
+
+
+                    <mat-expansion-panel [expanded]="true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title i18n>
+                                Additional Equipment
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div cdkDropListGroup>
+                            <div class="example-container">
+                                <h2 i18n>Available Equipments</h2>
+
+                                <ul cdkDropList [cdkDropListData]="equipmentList" class="example-list" cdkDropListSortingDisabled (cdkDropListDropped)="dropEqpt($event)">
+                                    <li title="{{item.description}}" class="example-box" *ngFor="let item of equipmentList; let i = index" data-value="{{ i }}" cdkDrag [cdkDragDisabled]="responseSiteOffer.data.status>1">
+                                        {{item.model}} &raquo; {{ item.description }}
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="example-container">
+                                <h2 i18n>Selected Equipments</h2>
+
+                                <ul cdkDropList [cdkDropListData]="selectedAEqpt" class="example-list" (cdkDropListDropped)="dropEqpt($event)" formArrayName="additionalEqpts">
+                                    <li class="example-box">
+                                        <p><strong i18n>Drag & Drop</strong> <span i18n>items here from Available Equipments list.</span> </p>
+                                    </li>
+                                    <li title="{{item.value.eqptDesc}}" class="example-box selectedAE" *ngFor="let item of additionalEqptsFormArray.controls; let i = index" [formGroupName]="i">
+                                        <mat-form-field>
+                                            <mat-label i18n>Quantity</mat-label>
+                                            <input matInput type="number" [readonly]="responseSiteOffer.data.status>1" formControlName="qty" id="qty{{item.value.eqptId}}">
+                                            <!-- <mat-error *ngIf="item.get('qty').hasError('required')" i18n>
+                                                    Number is <strong>required</strong>
+                                                </mat-error>
+                                                <mat-error *ngIf="item.get('qty').hasError('min')" i18n>
+                                                    Value must be greater than 0
+                                                </mat-error> -->
+                                        </mat-form-field>
+                                        <span>{{item.value.eqptModel}} &raquo; {{ item.value.eqptDesc }}</span>
+                                        <button *ngIf="responseSiteOffer.data.status == 1 || responseSiteOffer.data.status == undefined" mat-icon-button color="warn" type="button" (click)=removeAdditionalEqpt(i)>
+                                            <mat-icon>delete</mat-icon>
+                                        </button>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+
+                <div id="uploadForm">
+                    <div *ngIf="responseSiteOffer.data.status == 1" class="dropzone" dnd (fileDropped)="fileBrowseHandler($event)">
+                        <p i18n>Drag the offer in pdf format.</p>
+                        <input type="file" id="image" #fileDropRef (change)="fileBrowseHandler($event)" accept="application/pdf" />
+                        <label for="image" i18n>Browse for file</label>
+                    </div>
+
+                    <a *ngIf="responseSiteOffer.data.file_id" type="button" [href]="pdfDownloadLink" target="_blank" id="viewOffer">{{responseSiteOffer.data.file_name}}</a>
+                    <button *ngIf="responseSiteOffer.data.file_id && responseSiteOffer.data.status == 1" type="button" mat-raised-button color="primary" (click)="openDialog()" id="sendOffer" i18n>Send Offer to the
+                        client</button>
+                </div>
+
+
+            </mat-card-content>
+            <mat-card-actions>
+                <a *ngIf="responseSiteOffer.data.status==1" mat-raised-button color="accent" href="/api/offers/export/{{offerId}}" i18n>Export to
+                    excel</a>
+                <a mat-raised-button back i18n>Cancel</a>
+                <button id="submitButton" *ngIf="responseSiteOffer.data.status==1 || responseSiteOffer.data.status == undefined" type="submit" mat-raised-button color='primary' [disabled]="!form.valid || responseSiteOffer.data.status>1 || unitTypeFormArray.length==0">
+                    <span *ngIf="!offerId" i18n>Create</span>
+                    <span *ngIf="offerId" i18n>Update</span>
+                </button>
+                <button *ngIf="responseSiteOffer.data.status==2" id="acceptOffer" (click)="acceptOffer()" type="button" mat-raised-button color="accept" i18n>Accept</button>
+                <button *ngIf="responseSiteOffer.data.status==2" id="declineOffer" (click)="declineOffer()" type="button" mat-raised-button color="warn" i18n>Decline</button>
+            </mat-card-actions>
+
+        </mat-card>
+    </form>
+
+
+    <app-notes *ngIf="offerId" [offerId]="offerId"></app-notes>
+</div>

@@ -1,0 +1,60 @@
+<mat-card class="ved flex">
+
+    <mat-card-header>
+        <mat-toolbar color="primary">
+            <mat-card-title vedTitle i18n> Unit Type List </mat-card-title>
+        </mat-toolbar>
+    </mat-card-header>
+
+    <!-- <mat-card-content>
+        <ul>
+            <li *ngFor="let item of unitTypes" [routerLink]="['/units', item.id]">
+                <p> <strong>{{ item.name}} </strong>/ <strong>{{item.rooms }}</strong></p>
+                <button stopPropagation class="deleteBtn" id="delete{{item.id}}Btn" *ngIf="!item.locked" mat-button (click)="openDialog(item)" mat-raised-button color="warn" i18n>DELETE</button>
+            </li>
+        </ul>
+        <p *ngIf="unitTypes.length==0">No Unit Type found</p>
+    </mat-card-content> -->
+
+
+
+    <mat-card-content>
+        <table mat-table [dataSource]="unitTypes" #mytable class="my-table" *ngIf="unitTypes.length>0">
+
+            <!-- Client Name Column -->
+            <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef i18n> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Client Id Column -->
+            <ng-container matColumnDef="Rooms">
+                <th mat-header-cell *matHeaderCellDef i18n> Rooms </th>
+                <td mat-cell *matCellDef="let element"> {{element.rooms}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="Action">
+                <th mat-header-cell *matHeaderCellDef i18n> Actions </th>
+                <td mat-cell *matCellDef="let element" class="actions">
+                    <button [disabled]="element.locked" mat-button (click)="openDialog(element)" title="delete" i18n-title stopPropagation mat-raised-button color="warn" class="deleteBtn" id="{{ 'del' + element.id }}">
+                        <mat-icon> delete_forever</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['Name', 'Rooms', 'Action']"></tr>
+            <tr mat-row *matRowDef="let unitType; columns: ['Name', 'Rooms', 'Action'];" class="UTRow" id="UT{{ unitType.id }}" [routerLink]="['/units/edit', unitType.id]"></tr>
+        </table>
+
+
+        <p *ngIf="unitTypes.length==0" i18n>No Unit Types found</p>
+
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a [routerLink]="['/units/new']" mat-raised-button color="primary" id="addUnitType" i18n>Create Unit Type</a>
+    </mat-card-actions>
+
+</mat-card>

@@ -1,0 +1,14 @@
+<h2 mat-dialog-title i18n>Confirm</h2>
+<mat-dialog-content class="mat-typography">
+    <p *ngIf="data">
+      {{ data }}
+    </p>
+    <p i18n>
+      Do you want to proceed?
+    </p>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="basic" id="cancelDeleteBtn" mat-dialog-close i18n>Cancel</button>
+  <button mat-raised-button id="confirmDeleteBtn" [mat-dialog-close]="true" cdkFocusInitial i18n>Confirm</button>
+</mat-dialog-actions>

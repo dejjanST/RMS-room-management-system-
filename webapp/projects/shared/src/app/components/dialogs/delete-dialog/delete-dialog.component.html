@@ -1,0 +1,23 @@
+<h2 mat-dialog-title><span i18n>Delete</span> {{data.name}}?</h2>
+<mat-dialog-content class="mat-typography">
+  <p *ngIf="data.message">
+    {{ data.message }}
+  </p>
+  <p>
+    <span i18n>Are you sure you want to delete </span>{{ data.name }}?
+  </p>
+
+  <div class="flex">
+    <p>Please enter <span>{{ data.id }}</span></p>
+    <mat-form-field>
+      <input matInput [formControl]="confirmId" name="confirmId" id="confirmId" cdkFocusInitial>
+      <mat-error id="wrongId" *ngIf="confirmId.getError('wrongId')">Wrong ID.</mat-error>
+      <mat-error id="requiredId" *ngIf="confirmId.getError('required')">ID is required.</mat-error>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="basic" id="cancelDeleteBtn" mat-dialog-close i18n>Cancel</button>
+  <button mat-raised-button color="warn" id="confirmDeleteBtn" [mat-dialog-close]="data.id" [disabled]="!confirmId.valid" i18n>Delete</button>
+</mat-dialog-actions>

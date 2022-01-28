@@ -1,0 +1,81 @@
+<form [formGroup]="form" (ngSubmit)="save()" *ngIf="showForm" class="landingPage">
+    <mat-card class="ved">
+        <mat-toolbar color="primary">
+            <mat-card-title>
+                <span i18n vedTitle>System Info</span>
+            </mat-card-title>
+        </mat-toolbar>
+
+
+        <mat-card-content>
+
+            <mat-form-field class="full-width">
+                <mat-label i18n>Serial Number</mat-label>
+                <input matInput formControlName="serialNumber" name="serialNumber" class="serialNumber">
+                <mat-error *ngIf="f.serialNumber.invalid && (f.serialNumber.dirty || f.serialNumber.touched)" class="alert" align="end" id="error-serialNumber">
+                    <mat-error *ngIf="f.serialNumber.errors.required" id="serialNumberNameRequired" i18n>Serial Number is required</mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label i18n>Partner ID</mat-label>
+                <input matInput formControlName="partnerId" name="partnerId" class="partnerId">
+                <mat-error *ngIf="f.partnerId.invalid && (f.partnerId.dirty || f.partnerId.touched)" class="alert" align="end" id="error-partnerId">
+                    <mat-error *ngIf="f.partnerId.errors.required" id="partnerIdNumRequired" i18n>Partner Id is required
+                    </mat-error>
+                    <mat-error *ngIf="f.partnerId.errors.pattern" id="partnerIdNumberNumeric" i18n>Partner Id must be numeric
+                    </mat-error>
+                </mat-error>
+            </mat-form-field>
+
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid" i18n>Save</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+
+
+<mat-card class="showInfo ved" *ngIf="!showForm">
+    <mat-toolbar color="primary">
+        <mat-card-title>
+            <span i18n vedTitle>System Info</span>
+        </mat-card-title>
+    </mat-toolbar>
+
+    <mat-card-content>
+        <ul *ngIf="systemInfo.data">
+            <li>
+                <p i18n>Partner ID:</p>
+                <p>{{ systemInfo.data.partner_id }}</p>
+            </li>
+
+            <li>
+                <p i18n>Serial No:</p>
+                <p>{{ systemInfo.data.serial_number }}</p>
+            </li>
+
+            <li>
+                <p i18n>Uptime</p>
+                <p>{{ systemInfo.data.uptime | timeAgo }}</p>
+            </li>
+
+            <li>
+                <p i18n>Last Modified</p>
+                <p>{{ systemInfo.data.last_modification*1000 | date: 'dd.MM.yyyy HH:mm'}}</p>
+            </li>
+
+            <li>
+                <p i18n>Client Name</p>
+                <p>{{ systemInfo.data.client_name }}</p>
+            </li>
+
+            <li id="siteName">
+                <p i18n>Site Name</p>
+                <p>{{ systemInfo.data.site_name }}</p>
+            </li>
+        </ul>
+    </mat-card-content>
+
+</mat-card>

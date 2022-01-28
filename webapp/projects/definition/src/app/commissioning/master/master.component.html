@@ -1,0 +1,16 @@
+<mat-card class="master ved flex">
+
+    <mat-toolbar color="primary">
+        <mat-card-title i18n>Set Master controller</mat-card-title>
+    </mat-toolbar>
+
+    <mat-card-content>
+        <app-form-controller *ngIf="masterController" (succEvent)="nextBtn=true" [controller]="masterController" [position]="1" [siteId]="siteId" [unitId]="unitId"></app-form-controller>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a mat-raised-button back i18n>Back</a>
+        <button *ngIf="!nextBtn" [disabled]="!nextBtn" id="nextBtn" mat-raised-button color="primary" i18n>Next</button>
+        <a *ngIf="nextBtn" [disabled]="!nextBtn" id="nextLink" [routerLink]="['../controllers']" routerLinkActive="router-link-active" mat-raised-button color="primary" i18n>Next</a>
+    </mat-card-actions>
+</mat-card>

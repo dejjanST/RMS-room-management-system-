@@ -1,0 +1,109 @@
+<mat-card class="ved flex">
+    <mat-toolbar color="primary">
+        <mat-card-title *ngIf="client.data.name !==''" vedTitle>
+            <span i18n>Site List</span>
+            <span *ngIf="client.data.name">: {{ client.data.name }}</span>
+        </mat-card-title>
+    </mat-toolbar>
+
+
+    <mat-card-content>
+
+        <table mat-table [dataSource]="sites.data" #mytable class="my-table mat-elevation-z8" *ngIf="sites.data.length>0" class="sitesTable">
+            <!-- Site Name Column -->
+            <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef i18n> Name </th>
+                <td mat-cell *matCellDef="let element" id="{{ 'name-' + element.id }}">
+                    <span class="mobile-label" i18n>Name:</span>{{element.name}} </td>
+            </ng-container>
+
+            <!-- Client Id Column -->
+            <ng-container matColumnDef="Client ID">
+                <th mat-header-cell *matHeaderCellDef i18n> Client Id </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Client Id:</span> {{element.client_code}} </td>
+            </ng-container>
+
+
+            <!-- Site Id Column -->
+            <ng-container matColumnDef="Site ID">
+                <th mat-header-cell *matHeaderCellDef i18n> Site Id </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Site Id:</span> {{element.site_id}} </td>
+            </ng-container>
+
+            <!-- Site Country Column -->
+            <ng-container matColumnDef="Country">
+                <th mat-header-cell *matHeaderCellDef i18n> Country </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Country</span> {{element.country}} </td>
+            </ng-container>
+
+            <!-- Site Country Column -->
+            <ng-container matColumnDef="City">
+                <th mat-header-cell *matHeaderCellDef i18n> City </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>City:</span> {{element.city}} </td>
+            </ng-container>
+
+            <!-- Site Country Column -->
+            <ng-container matColumnDef="Address">
+                <th mat-header-cell *matHeaderCellDef i18n> Address </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Adress:</span>{{element.address}} </td>
+            </ng-container>
+
+            <!-- Site Progress Column -->
+            <ng-container matColumnDef="Progress">
+                <th mat-header-cell *matHeaderCellDef i18n> Progress </th>
+                <td mat-cell *matCellDef="let element">
+                    <span class="mobile-label" i18n>Progress:</span>
+                    <div id="progressContainer" i18n-title title="Definition: {{element.progress.definition.progressInPercent}}% &#013; Commissioning: {{element.progress.commissioning.progressInPercent}}%">
+                        <mat-progress-bar color="primary" mode="buffer" [value]="element.progress.definition.progressInPercent">
+                        </mat-progress-bar>
+                        <mat-progress-bar color="accent" mode="buffer" [value]="element.progress.commissioning.progressInPercent">
+                        </mat-progress-bar>
+                    </div>
+
+                </td>
+            </ng-container>
+
+            <!-- Site Status Column -->
+            <ng-container matColumnDef="Status">
+                <th mat-header-cell *matHeaderCellDef i18n> Status </th>
+                <td mat-cell *matCellDef="let element" id="status">
+                    <span class="mobile-label" i18n>Status:</span>
+                    <site-status [siteDetails]="element"></site-status>
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="Action">
+                <th mat-header-cell *matHeaderCellDef i18n> </th>
+                <td mat-cell *matCellDef="let element" class="actions">
+                    <a mat-raised-button [disabled]="element.status == 0" [href]="element.link" target="_blank" stopPropagation i18n>Go
+                        to Site server
+                        <mat-icon>open_in_new</mat-icon>
+                    </a>
+                    <button type="button" mat-raised-button color="primary" id="{{ 'invite-' + element.id }}" (click)="openInviteManagerDialog(element)" stopPropagation i18n>Invite Manager</button>
+                    <a [routerLink]="[ '/sites', element.id, 'buildings']" stopPropagation mat-raised-button color="primary" id="{{ 'building-' + element.id }}" i18n>Buildings</a>
+                    <a [routerLink]="[ '/sites', element.id, 'fld']" stopPropagation mat-raised-button color="primary" id="{{ 'fld-' + element.id }}" i18n>Floor Layouts</a>
+                    <a [routerLink]="[ '/sites', element.id, 'offers']" stopPropagation mat-raised-button color="primary" id="{{ 'offer-' + element.id }}" i18n>Offers</a>
+                    <button i18n-title class="deleteBtn" title="delete" mat-button (click)="openDialog(element)" stopPropagation mat-raised-button color="warn" id="{{ 'del-' + element.id }}">
+                        <mat-icon> delete_forever</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="['Name', 'Client ID', 'Site ID', 'Country', 'City', 'Address', 'Progress', 'Status', 'Action']">
+            </tr>
+            <tr mat-row *matRowDef="let site; columns: ['Name', 'Client ID', 'Site ID', 'Country', 'City', 'Address', 'Progress', 'Status', 'Action'];" [routerLink]="['/clients', site.client_id, 'sites', site.id]" id="{{ 'edit-' + site.id }}"></tr>
+        </table>
+
+        <p *ngIf="sites.data.length===0" i18n>No Sites found</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <a *ngIf="siteSearch.client" mat-raised-button back i18n>Back</a>
+        <a *ngIf="this.siteSearch.client" [routerLink]="['/clients', siteSearch.client, 'sites', 'new']" mat-raised-button color="primary" id="createSite" i18n>Create Site</a>
+    </mat-card-actions>
+</mat-card>
